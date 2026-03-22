@@ -54,18 +54,113 @@ I work in an AI-heavy loop, but with structure:
 - Delivery and QA: Playwright, Biome, CI workflows, Vercel, Netlify
 - Systems work: Go, Rust, Docker
 
-## Activity Signals
+## AI Operations Dashboard
 
-Snapshot as of `2026-03-22`:
+Snapshot as of `2026-03-22`.
 
-- `64` GitHub repositories total: `19` public, `45` private
-- `29` repositories pushed in `2026` already
-- `1,995` GitHub contributions in the last year
-- `1,529` of those contributions came from private work
-- `183` pull request contributions in the last year
-- local Codex history tracks `251` threads across `31` working directories
-- local Codex thread state tracks about `2.98B` tokens used
-- local Claude history contains `2,008` entries
+<table>
+  <tr>
+    <td valign="top">
+      <strong>Codex</strong><br/>
+      251 tracked threads<br/>
+      2.98B tracked tokens<br/>
+      31 working directories
+    </td>
+    <td valign="top">
+      <strong>Claude</strong><br/>
+      2,008 history entries<br/>
+      174 sessions<br/>
+      15 projects
+    </td>
+    <td valign="top">
+      <strong>GitHub</strong><br/>
+      1,995 contributions<br/>
+      183 PR contributions<br/>
+      1,529 private contributions
+    </td>
+  </tr>
+</table>
+
+### Monthly View
+
+| Month | GitHub Contributions | Codex Threads | Codex Tokens | Claude Entries |
+| --- | ---: | ---: | ---: | ---: |
+| 2026-03 | 36 | 76 | 1216.6M | 14 |
+| 2026-02 | 598 | 143 | 1732.7M | 482 |
+| 2026-01 | 634 | 15 | 1.1M | 1512 |
+| 2025-12 | 37 | 10 | 3.7M | - |
+| 2025-11 | 93 | 2 | 3.9M | - |
+| 2025-10 | 69 | 3 | 17.7M | - |
+| 2025-09 | 84 | 2 | 2.9M | - |
+
+### Monthly Load
+
+```text
+2026-03  GH  36  |#...................|  Codex  76 threads |###########.........|  Tokens 1216.6M |##############......|  Claude  14 |#...................|
+2026-02  GH 598  |###################.|  Codex 143 threads |####################|  Tokens 1732.7M |####################|  Claude 482 |######..............|
+2026-01  GH 634  |####################|  Codex  15 threads |##..................|  Tokens    1.1M |#...................|  Claude 1512|####################|
+```
+
+### Top Projects
+
+**Codex**
+
+| Project | Threads | Tokens |
+| --- | ---: | ---: |
+| meinungsmache-app | 77 | 826.0M |
+| repos root | 41 | 490.6M |
+| stead-core | 10 | 431.4M |
+| passepartout | 3 | 282.2M |
+| Aegis | 1 | 245.3M |
+| stead | 9 | 185.7M |
+
+**Claude**
+
+| Project | Entries |
+| --- | ---: |
+| picalyze | 392 |
+| meinungsmache-app | 373 |
+| qwer-digest | 228 |
+| qwer-q | 145 |
+| stead | 95 |
+| Upstrio | 81 |
+
+<details>
+  <summary>More AI internals</summary>
+
+  <br/>
+
+  <strong>Codex agent role split</strong>
+
+  | Role | Threads | Tokens |
+  | --- | ---: | ---: |
+  | main | 219 | 2279.6M |
+  | worker | 24 | 597.6M |
+  | explorer | 4 | 87.3M |
+  | researcher | 2 | 12.3M |
+  | convex_expert | 1 | 1.6M |
+  | frontend_claude | 1 | 0.3M |
+
+  <strong>Top Claude commands</strong>
+
+  | Command | Count |
+  | --- | ---: |
+  | /resume | 63 |
+  | /rewind | 53 |
+  | /plugin | 50 |
+  | /clear | 25 |
+  | /compact | 23 |
+  | /usage | 16 |
+  | /export | 13 |
+  | /rate-limit-options | 9 |
+
+  <strong>Repo footprint</strong>
+
+  - 64 GitHub repositories total
+  - 19 public repositories
+  - 45 private repositories
+  - 29 repositories pushed in 2026 already
+</details>
 
 ## Start Here
 
