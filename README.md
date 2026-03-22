@@ -12,10 +12,10 @@ Full-stack + mobile engineer building product systems, developer tools, and AI-n
 
 Current focus:
 
-- [VeraMint](https://veramint.de) - mobile news product focused on human-curated journalism, offline-first reading, and media literacy
-- [Picalyze](https://picalyze.com) - photography analysis platform for upload, analysis, and workflow exploration
-- [qwer-q](https://github.com/edhor1608/qwer-q) - typed, docker-first message queue with schema registry and dashboard
-- [stead-core](https://github.com/edhor1608/stead-core) - vendor-neutral session standard for Codex and Claude Code interop
+- 🗞️ [VeraMint](https://veramint.de) - mobile news product focused on human-curated journalism, offline-first reading, and media literacy
+- 📸 [Picalyze](https://picalyze.com) - photography analysis platform for upload, analysis, and workflow exploration
+- 🚇 [qwer-q](https://github.com/edhor1608/qwer-q) - typed, docker-first message queue with schema registry and dashboard
+- 🔌 [stead-core](https://github.com/edhor1608/stead-core) - vendor-neutral session standard for Codex and Claude Code interop
 
 Current setup:
 
@@ -25,12 +25,12 @@ Current setup:
 
 Live and runnable:
 
-- [VeraMint](https://veramint.de)
-- [Picalyze](https://picalyze.com)
-- [qwer-q](https://github.com/edhor1608/qwer-q)
-- [passepartout](https://github.com/edhor1608/passepartout)
-- [aurora](https://github.com/edhor1608/aurora)
-- [stead](https://github.com/edhor1608/stead)
+- 🗞️ [VeraMint](https://veramint.de)
+- 📸 [Picalyze](https://picalyze.com)
+- 🚇 [qwer-q](https://github.com/edhor1608/qwer-q)
+- 🖼️ [passepartout](https://github.com/edhor1608/passepartout)
+- 🌌 [aurora](https://github.com/edhor1608/aurora)
+- 🧰 [stead](https://github.com/edhor1608/stead)
 
 Proof of motion:
 
@@ -42,14 +42,14 @@ Proof of motion:
 
 ## Systems I Ship, Build, And Explore
 
-- **[stead](https://github.com/edhor1608/stead)** - workspace orchestrator for terminals, ports, and context
-- **[aurora](https://github.com/edhor1608/aurora)** - European community platform with a Convex-first realtime core
-- **[passepartout](https://github.com/edhor1608/passepartout)** - photography-first export tool for framed image output and social-ready formats
-- **edhor-me** - personal site and portfolio with an AI-powered ask-me flow
-- **Thinking Loop** - deep research and idea-convergence workflow built around iterative agent loops
-- **Fair Creator** - transparency-first platform for creator-contractor relationships and fair work standards
-- **Image Provenance** - verifiable image authenticity that survives social media distribution
-- **Upstrio** - European streaming platform exploring fair economics and distributed infrastructure
+- **🧰 [stead](https://github.com/edhor1608/stead)** - workspace orchestrator for terminals, ports, and context
+- **🌌 [aurora](https://github.com/edhor1608/aurora)** - European community platform with a Convex-first realtime core
+- **🖼️ [passepartout](https://github.com/edhor1608/passepartout)** - photography-first export tool for framed image output and social-ready formats
+- **🌐 edhor-me** - personal site and portfolio with an AI-powered ask-me flow
+- **🧠 Thinking Loop** - deep research and idea-convergence workflow built around iterative agent loops
+- **🤝 Fair Creator** - transparency-first platform for creator-contractor relationships and fair work standards
+- **🔏 Image Provenance** - verifiable image authenticity that survives social media distribution
+- **📡 Upstrio** - European streaming platform exploring fair economics and distributed infrastructure
 
 ## What I'm Doing
 
