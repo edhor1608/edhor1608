@@ -57,3 +57,28 @@ Use a hybrid layout for the AI section:
 - The section is denser and may need future trimming after real-world viewing
 - Static bars and month snapshots will become stale without automation
 - The README now doubles as both profile copy and a lightweight operations dashboard
+
+## 2026-03-22 - AI dashboard refresh workflow
+
+### Context
+
+The profile now contains machine-derived AI and GitHub metrics. Updating those numbers by hand is error-prone and makes the dashboard stale quickly.
+
+### Decision
+
+Add:
+
+1. `scripts/generate_ai_dashboard.py` to regenerate the markdown block for the full `AI Operations Dashboard` section
+2. `docs/refresh-ai-dashboard.md` with a reusable prompt and manual verification steps
+
+### Rationale
+
+- One script keeps the dashboard numbers reproducible from local machine state
+- A dedicated prompt file makes it easy to hand the refresh task to Codex or Claude
+- Generating the whole section avoids partial edits and drift between tables, bars, and summary cards
+
+### Consequences
+
+- The workflow now depends on local Codex/Claude data files and authenticated `gh`
+- GitHub metrics can move during the same day, so reruns may change totals without any repo edits
+- Future automation can wire this script directly into a README refresh command if needed

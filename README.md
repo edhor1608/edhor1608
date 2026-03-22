@@ -74,7 +74,7 @@ Snapshot as of `2026-03-22`.
     </td>
     <td valign="top">
       <strong>GitHub</strong><br/>
-      1,995 contributions<br/>
+      2,000 contributions<br/>
       183 PR contributions<br/>
       1,529 private contributions
     </td>
@@ -85,7 +85,7 @@ Snapshot as of `2026-03-22`.
 
 | Month | GitHub Contributions | Codex Threads | Codex Tokens | Claude Entries |
 | --- | ---: | ---: | ---: | ---: |
-| 2026-03 | 36 | 76 | 1216.6M | 14 |
+| 2026-03 | 39 | 76 | 1216.6M | 14 |
 | 2026-02 | 598 | 143 | 1732.7M | 482 |
 | 2026-01 | 634 | 15 | 1.1M | 1512 |
 | 2025-12 | 37 | 10 | 3.7M | - |
@@ -96,9 +96,9 @@ Snapshot as of `2026-03-22`.
 ### Monthly Load
 
 ```text
-2026-03  GH  36  |#...................|  Codex  76 threads |###########.........|  Tokens 1216.6M |##############......|  Claude  14 |#...................|
-2026-02  GH 598  |###################.|  Codex 143 threads |####################|  Tokens 1732.7M |####################|  Claude 482 |######..............|
-2026-01  GH 634  |####################|  Codex  15 threads |##..................|  Tokens    1.1M |#...................|  Claude 1512|####################|
+2026-03  GH  39  |#...................|  Codex  76 threads |###########.........|  Tokens  1216.6M |##############......|  Claude   14 |#...................|
+2026-02  GH 598  |###################.|  Codex 143 threads |####################|  Tokens  1732.7M |####################|  Claude  482 |######..............|
+2026-01  GH 634  |####################|  Codex  15 threads |##..................|  Tokens     1.1M |#...................|  Claude 1512 |####################|
 ```
 
 ### Top Projects
@@ -118,7 +118,7 @@ Snapshot as of `2026-03-22`.
 
 | Project | Entries |
 | --- | ---: |
-| picalyze | 392 |
+| Picalyze | 392 |
 | VeraMint | 373 |
 | qwer-digest | 228 |
 | qwer-q | 145 |
