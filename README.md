@@ -21,13 +21,14 @@ This profile shows the systems I work on, what they do, and how I operate across
 | Image Provenance | planning | Verifiable image authenticity that survives social media distribution | Rust, watermarking, distributed registry | private |
 | Upstrio | concept | European streaming platform exploring fair economics and distributed infrastructure | architecture, market design, distributed systems | private |
 
-## Recent Shipped Work
+## Live And Runnable Now
 
-- [VeraMint](https://veramint.de): pushed the Expo 55 upgrade, audio migration, and release-gating work for mobile delivery
-- aurora: shipped auth/session baseline work and permissioned text flow core
-- qwer-q: shipped a typed queue with schema registry, durability, metrics, and an embedded dashboard
-- [Picalyze](https://picalyze.com): improved third-party integration error handling, health checks, and asset sync tracking
-- edhor-me: built the portfolio site around Astro, Playwright, and an AI-powered ask-me interface
+- [VeraMint](https://veramint.de) - live public site
+- [Picalyze](https://picalyze.com) - live public site
+- [qwer-q](https://github.com/edhor1608/qwer-q) - public queue you can run today via Docker or from source
+- [passepartout](https://github.com/edhor1608/passepartout) - public CLI you can run locally for image analysis and export workflows
+- [aurora](https://github.com/edhor1608/aurora) - public vertical slice with a runnable web app and realtime backend scaffold
+- [stead](https://github.com/edhor1608/stead) - public CLI and control-room environment buildable from source
 
 ## What I Optimize For
 

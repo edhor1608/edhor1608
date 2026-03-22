@@ -82,3 +82,29 @@ Add:
 - The workflow now depends on local Codex/Claude data files and authenticated `gh`
 - GitHub metrics can move during the same day, so reruns may change totals without any repo edits
 - Future automation can wire this script directly into a README refresh command if needed
+
+## 2026-03-22 - Usable shipped work definition
+
+### Context
+
+The earlier shipped section mixed recent implementation work with projects that were not directly usable or viewable by a visitor.
+
+### Decision
+
+Define that section as:
+
+1. live public sites
+2. public projects that are clearly runnable from the repo, package, container, or quick-start path
+
+Rename the section to `Live And Runnable Now`.
+
+### Rationale
+
+- This keeps the claim honest and visitor-centered
+- It removes ambiguous “shipped” language for work that is only recently touched
+- It gives readers a direct path to try or inspect the work immediately
+
+### Consequences
+
+- Private but shipped work no longer appears in that section unless it is publicly accessible
+- The section may need periodic review as more projects gain or lose live surfaces
