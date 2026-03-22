@@ -67,16 +67,6 @@ Snapshot as of `2026-03-22`:
 - local Codex thread state tracks about `2.98B` tokens used
 - local Claude history contains `2,008` entries
 
-## Why Some Code Stays Closed
-
-When a repo is private, it is usually because:
-
-- it is a product I want to monetize
-- it contains internal tooling or infrastructure details
-- I want to show the system publicly without giving away the implementation
-
-That is why this profile names private systems and explains the work, even when the source stays closed.
-
 ## Start Here
 
 If you want a quick sample of what I build, start with:
