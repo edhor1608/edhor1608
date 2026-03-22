@@ -46,13 +46,15 @@ My AI usage is structured, repo-bound, and phase-dependent rather than one gener
 - Planning and task shaping stay inside the build loop. In Codex thread openers alone, planning-related prompts show up `65` times, documentation `58`, bugfix `49`, review `35`, research `28`, and testing `23`.
 - Frontend and product-shaping work are a major slice of the loop. Frontend/UI signals show up `98` times in Codex thread openers and `489` times in Claude transcript user messages.
 - Parallel execution is part of the normal operating model. Worktree-specific Codex prompts appear `19` times, explicit agent prompts `9` times, and non-main agent roles account for `32` threads and about `699M` tracked tokens.
-- It is not a single-harness setup. Local footprints exist for `opencode`, `Cursor`, `Windsurf`, and `t3`, and repo-level harness configs show up across `Cursor`, `Opencode`, `Windsurf`, and `Cline`.
+- The setup is opinionated rather than scattered. `Codex` is the main delivery lane, and `Claude Code` is the UI and frontend-design sidecar when visual work matters.
 - The work stays project-centered. Codex-heavy work clusters around `VeraMint`, `stead-core`, `passepartout`, `Aegis`, and `Nexum`. Claude-heavy work clusters around `Picalyze`, `VeraMint`, `qwer-digest`, `qwer-q`, and `Upstrio`.
 
 ### How The Tool Split Looks
 
 - `Claude` carries the high-volume exploration layer. January `2026` alone has `1,512` Claude entries, with dominant signals in bugfixing, planning, testing, and brainstorming.
-- `Codex` carries the heavier repo-bound execution layer. February `2026` jumps to `143` Codex threads and `1.73B` tracked tokens, with strong planning, frontend, docs, bugfix, PR, and review signals.
+- `Codex` carries the heavier repo-bound execution layer. The current setup is `GPT-5.4`, mainly through the `codex` CLI, with the Codex app also in use.
+- `Claude Code` is the frontend and UI lane. The current setup there is `Opus 4.6` together with the frontend-design skill.
+- `T3` is in evaluation, but not yet part of the stable default workflow.
 - March `2026` stays Codex-heavy: `76` threads and `1.22B` tracked tokens, while Claude drops to `14` entries and mostly reads as a frontend/UI sidecar. The top Codex signals in March are frontend, docs, brainstorm, and plan, which reads like active product and tooling buildout rather than passive chat.
 
 ### What Changed Over Weeks
@@ -65,7 +67,9 @@ My AI usage is structured, repo-bound, and phase-dependent rather than one gener
 ### Tools I Actually Use
 
 - AI: Codex, Claude
-- Harnesses: OpenCode, Cursor, Windsurf, T3
+- Current setup: `Codex` via `GPT-5.4`, mainly in the CLI, plus the Codex app
+- UI setup: `Claude Code` with `Opus 4.6` and the frontend-design skill
+- In evaluation: `T3`
 - Workflow: `git`, `git worktree`, `gh`, PR review loops, multi-agent execution
 - Product stack: TypeScript, Bun, React, Next.js, Astro, Expo, Convex, PostgreSQL
 - Delivery and QA: Playwright, Biome, CI workflows, Vercel, Netlify

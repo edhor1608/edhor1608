@@ -728,6 +728,7 @@ def render_markdown(
                 "",
                 "- It is strongest as a code-retention signal, not as a complete usage counter.",
                 "- The sample is concentrated in repositories where git-ai tracking exists, so it should not replace the wider Codex and Claude telemetry above.",
+                "- A single tool or model entry in this sample should not be treated as proof of a current default setup by itself.",
                 "- Even with that caveat, it supports a useful claim: when prompts are tracked through git, the resulting code tends to land with very little post-edit churn.",
             ]
         )
@@ -738,6 +739,7 @@ def render_markdown(
             "",
             "## Harness Footprint",
             "",
+            "- This section tracks installs, config spread, and bridge artifacts. It is not a direct measure of current primary usage.",
             f"- Home-level harness footprints present: `{', '.join(present_harnesses)}`" if present_harnesses else "- No additional home-level harness footprints detected.",
             f"- Repository-level Opencode footprints: `{len(harness['repo_counts'].get('opencode', []))}`",
             f"- Repository-level Cursor footprints: `{len(harness['repo_counts'].get('cursor', []))}`",

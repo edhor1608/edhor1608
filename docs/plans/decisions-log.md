@@ -217,3 +217,30 @@ Reflect only the strongest part publicly: that the workflow is multi-harness, wh
 - The analyzer script now covers a wider operational surface than just Codex and Claude logs
 - The public profile can mention multi-harness usage without overstating any specific third-party tool
 - The detailed harness spread remains private context instead of public profile copy
+
+## 2026-03-22 - Prioritize user-confirmed current setup over passive footprint data
+
+### Context
+
+The local machine and repo scan can detect installs, config files, and old bridge artifacts for tools like Opencode, Cursor, Windsurf, and T3. That is useful context, but it can drift away from the actual current workflow.
+
+### Decision
+
+For public-facing wording, prefer the user-confirmed current setup:
+
+1. `Codex` via `GPT-5.4`, mainly through the CLI, with the Codex app also in use
+2. `Claude Code` with `Opus 4.6` and the frontend-design skill for UI work
+3. `T3` as something being tested, but not yet stable enough to count as a default lane
+4. do not present `Gemini` or `Opencode` as active current usage based only on passive telemetry or old prompt samples
+
+### Rationale
+
+- Direct user confirmation is higher quality than inferring current preference from install traces
+- Public profile text should describe the current setup, not just the machine's historical surface area
+- The local analysis can still keep weaker signals, as long as they are labeled correctly
+
+### Consequences
+
+- The README now reflects the current tool split more accurately
+- The local analyzer keeps harness data, but explicitly labels it as footprint rather than primary usage
+- Future profile edits should separate current setup from historical or experimental tooling
