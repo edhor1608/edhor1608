@@ -1,5 +1,43 @@
 # Jonas Rohde
 
+> Experimental top section for comparison: curated builder direction.
+
+I build product systems, developer tools, and AI-native delivery workflows.
+
+Current focus:
+
+- [VeraMint](https://veramint.de) - mobile news product focused on human-curated journalism, offline-first reading, and media literacy
+- [Picalyze](https://picalyze.com) - photography analysis platform for upload, analysis, and workflow exploration
+- [qwer-q](https://github.com/edhor1608/qwer-q) - typed, docker-first message queue with schema registry and dashboard
+- [stead-core](https://github.com/edhor1608/stead-core) - vendor-neutral session standard for Codex and Claude Code interop
+
+Current setup:
+
+- `Codex` via `GPT-5.4`, mainly in the CLI, with the Codex app also in use
+- `Claude Code` with `Opus 4.6` and the frontend-design skill for UI work
+- `T3` in evaluation, but not yet a stable default lane
+
+Live and runnable:
+
+- [VeraMint](https://veramint.de)
+- [Picalyze](https://picalyze.com)
+- [qwer-q](https://github.com/edhor1608/qwer-q)
+- [passepartout](https://github.com/edhor1608/passepartout)
+- [aurora](https://github.com/edhor1608/aurora)
+- [stead](https://github.com/edhor1608/stead)
+
+Proof of motion:
+
+- `2,005` GitHub contributions
+- `183` PR contributions
+- `251` tracked Codex threads
+- `2.98B` tracked Codex tokens
+- `2,008` Claude history entries
+
+---
+
+Current longer version below for comparison.
+
 I build products, infrastructure, and AI-native delivery systems.
 
 This profile shows the systems I work on, what they do, and how I operate across public and private projects.

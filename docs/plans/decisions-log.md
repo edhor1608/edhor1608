@@ -244,3 +244,33 @@ For public-facing wording, prefer the user-confirmed current setup:
 - The README now reflects the current tool split more accurately
 - The local analyzer keeps harness data, but explicitly labels it as footprint rather than primary usage
 - Future profile edits should separate current setup from historical or experimental tooling
+
+## 2026-03-22 - Add a compareable curated-builder top section
+
+### Context
+
+The `steipete` profile comparison showed a stronger top-of-page structure: fast identity, current focus, curated links, and proof of motion before the longer detail sections. Instead of replacing the whole README immediately, the goal was to compare that direction live against the current structure.
+
+### Decision
+
+Add an experimental top block above the existing README with:
+
+1. a compact identity statement
+2. current-focus projects
+3. current AI setup
+4. live and runnable links
+5. proof-of-motion metrics
+
+Keep the existing longer structure underneath, separated by a divider, so the two directions can be compared visually on the live profile.
+
+### Rationale
+
+- This creates a real A/B comparison instead of debating structure abstractly
+- The curated-builder direction is strongest when seen at the very top of the profile
+- Keeping the older version below avoids losing useful detail too early
+
+### Consequences
+
+- The profile is temporarily redundant by design
+- The next pass should remove one of the two directions after comparison
+- Feedback can now focus on structure and scannability rather than imagined diffs
