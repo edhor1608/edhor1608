@@ -188,3 +188,32 @@ Use those results to rewrite the public `AI-Native Operator` section and add com
 - The local analysis artifact became more useful for future rewrites, but also more sensitive and therefore should remain local-only
 - The public README now makes stronger claims with better evidence behind them
 - The dashboard has slightly more density, so future passes may need a trim after live review
+
+## 2026-03-22 - Include harness footprint in AI workflow analysis
+
+### Context
+
+The session-level analysis captured Codex and Claude well, but it missed an important part of the setup: the machine and repos also show real usage or experimentation with other harnesses such as Opencode, Cursor, Windsurf, T3, and repo-level bridge workflows.
+
+### Decision
+
+Expand the local analysis to track:
+
+1. home-level harness footprints
+2. repo-level harness config spread
+3. local `t3` state counts
+4. dedicated multi-harness bridge artifacts such as the `stead-core-live-m13-opencode` workspace
+
+Reflect only the strongest part publicly: that the workflow is multi-harness, while keeping the denser breakdown local-only.
+
+### Rationale
+
+- This distinguishes actual harness usage from merely mentioning other tools in chats
+- The README benefits from one concise public signal, but the detailed harness inventory would be too much for the profile page
+- The local report becomes a better source of truth for future iterations
+
+### Consequences
+
+- The analyzer script now covers a wider operational surface than just Codex and Claude logs
+- The public profile can mention multi-harness usage without overstating any specific third-party tool
+- The detailed harness spread remains private context instead of public profile copy

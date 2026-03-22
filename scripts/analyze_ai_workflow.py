@@ -52,6 +52,23 @@ PATH_MARKERS = [
     ("edhor-fotos", "edhor-fotos"),
 ]
 
+HOME_HARNESSES = {
+    "opencode": Path.home() / ".opencode",
+    "cursor": Path.home() / ".cursor",
+    "windsurf": Path.home() / ".windsurf",
+    "t3": Path.home() / ".t3",
+    "aider": Path.home() / ".aider",
+    "cline": Path.home() / ".cline",
+    "roo": Path.home() / ".roo",
+}
+
+REPO_HARNESS_MARKERS = {
+    "opencode": {".opencode", "opencode.json", "opencode"},
+    "cursor": {".cursor", ".cursorrules", "cursor"},
+    "windsurf": {".windsurf", ".windsurfrules"},
+    "cline": {".cline", ".clinerules"},
+}
+
 
 @dataclass
 class WeeklyRow:
@@ -373,6 +390,76 @@ def git_ai_data(db_path: Path) -> dict[str, Any] | None:
     }
 
 
+def harness_data(repos_root: Path) -> dict[str, Any]:
+    home_presence = {name: path.exists() for name, path in HOME_HARNESSES.items()}
+    repo_counts: dict[str, set[str]] = defaultdict(set)
+    candidates: list[Path] = []
+    for path in repos_root.iterdir():
+        if not path.is_dir():
+            continue
+        candidates.append(path)
+        if path.name in {"qwer", "worktrees"}:
+            for child in path.iterdir():
+                if child.is_dir():
+                    candidates.append(child)
+
+    repo_marker_paths = {
+        "opencode": [".opencode", "opencode.json", ".git/opencode"],
+        "cursor": [".cursor", ".cursorrules", ".git/cursor"],
+        "windsurf": [".windsurf", ".windsurfrules"],
+        "cline": [".cline", ".clinerules"],
+    }
+
+    for repo_root in candidates:
+        label = project_name_from_path(str(repo_root))
+        for harness, markers in repo_marker_paths.items():
+            if any((repo_root / marker).exists() for marker in markers):
+                repo_counts[harness].add(label)
+
+    top_level_harness_dirs = Counter()
+    for path in repos_root.iterdir():
+        if not path.exists():
+            continue
+        lowered = path.name.lower()
+        if "opencode" in lowered:
+            top_level_harness_dirs["opencode"] += 1
+        if "t3" in lowered:
+            top_level_harness_dirs["t3"] += 1
+
+    t3_state = None
+    t3_db = Path.home() / ".t3" / "userdata" / "state.sqlite"
+    if t3_db.exists():
+        conn = sqlite3.connect(t3_db)
+        cur = conn.cursor()
+        t3_state = {
+            "threads": cur.execute("select count(*) from projection_threads").fetchone()[0],
+            "sessions": cur.execute("select count(*) from projection_thread_sessions").fetchone()[0],
+            "messages": cur.execute("select count(*) from projection_thread_messages").fetchone()[0],
+        }
+        conn.close()
+
+    bridge_counts = None
+    bridge_root = repos_root / "stead-core-live-m13-opencode" / ".stead-core" / "sessions"
+    if bridge_root.exists():
+        bridge_counts = Counter()
+        for path in bridge_root.glob("*.json"):
+            name = path.name
+            if name.startswith("stead_opencode_"):
+                bridge_counts["opencode"] += 1
+            elif name.startswith("stead_codex_"):
+                bridge_counts["codex"] += 1
+            elif name.startswith("stead_claude_code_"):
+                bridge_counts["claude_code"] += 1
+
+    return {
+        "home_presence": home_presence,
+        "repo_counts": {name: sorted(values) for name, values in repo_counts.items()},
+        "top_level_harness_dirs": top_level_harness_dirs,
+        "t3_state": t3_state,
+        "bridge_counts": bridge_counts,
+    }
+
+
 def build_weekly_rows(
     github_weeks: dict[str, int],
     codex_weeks: dict[str, dict[str, int]],
@@ -404,6 +491,7 @@ def render_markdown(
     claude_h: dict[str, Any],
     claude_t: dict[str, Any],
     git_ai: dict[str, Any] | None,
+    harness: dict[str, Any],
 ) -> str:
     transition_lines = [
         "- January 2026 was Claude-heavy exploration and session volume, with comparatively little Codex thread activity.",
@@ -644,6 +732,46 @@ def render_markdown(
             ]
         )
 
+    present_harnesses = [name for name, present in harness["home_presence"].items() if present]
+    lines.extend(
+        [
+            "",
+            "## Harness Footprint",
+            "",
+            f"- Home-level harness footprints present: `{', '.join(present_harnesses)}`" if present_harnesses else "- No additional home-level harness footprints detected.",
+            f"- Repository-level Opencode footprints: `{len(harness['repo_counts'].get('opencode', []))}`",
+            f"- Repository-level Cursor footprints: `{len(harness['repo_counts'].get('cursor', []))}`",
+            f"- Repository-level Windsurf footprints: `{len(harness['repo_counts'].get('windsurf', []))}`",
+            f"- Repository-level Cline footprints: `{len(harness['repo_counts'].get('cline', []))}`",
+        ]
+    )
+
+    if harness["t3_state"]:
+        lines.append(
+            f"- Local `t3` state currently tracks `{harness['t3_state']['threads']}` threads, `{harness['t3_state']['sessions']}` sessions, and `{harness['t3_state']['messages']}` messages."
+        )
+    if harness["top_level_harness_dirs"]:
+        counts = ", ".join(f"{name} ({count})" for name, count in harness["top_level_harness_dirs"].most_common())
+        lines.append(f"- Top-level harness-specific workspaces in `~/repos`: {counts}.")
+    if harness["bridge_counts"]:
+        bridge = ", ".join(f"{name} ({count})" for name, count in harness["bridge_counts"].most_common())
+        lines.append(f"- `stead-core-live-m13-opencode` contains paired bridge-session artifacts for: {bridge}.")
+
+    if any(harness["repo_counts"].values()):
+        lines.extend(
+            [
+                "",
+                "### Repository Harness Spread",
+                "",
+                "| Harness | Repositories |",
+                "| --- | --- |",
+            ]
+        )
+        for harness_name in ["opencode", "cursor", "windsurf", "cline"]:
+            repos = harness["repo_counts"].get(harness_name, [])
+            if repos:
+                lines.append(f"| {harness_name} | {', '.join(repos)} |")
+
     lines.extend(
         [
             "",
@@ -685,8 +813,9 @@ def main() -> None:
     claude_h = claude_history(Path.home() / ".claude" / "history.jsonl")
     claude_t = claude_transcripts(Path.home() / ".claude" / "projects")
     git_ai = git_ai_data(Path(args.git_ai_db))
+    harness = harness_data(Path.home() / "repos")
     weekly_rows = build_weekly_rows(github_weeks, codex["weekly"], claude_h["weekly"], args.weeks)
-    print(render_markdown(args.user, weekly_rows, codex, claude_h, claude_t, git_ai))
+    print(render_markdown(args.user, weekly_rows, codex, claude_h, claude_t, git_ai, harness))
 
 
 if __name__ == "__main__":
