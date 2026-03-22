@@ -1,8 +1,14 @@
-# Jonas Rohde
+# Hi, I'm Jonas Rohde
 
-> Experimental top section for comparison: curated builder direction.
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![React_Native](https://img.shields.io/badge/-React_Native-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Convex](https://img.shields.io/badge/-Convex-EE342F?style=flat-square&logoColor=white)
+![Codex](https://img.shields.io/badge/-Codex-121212?style=flat-square&logo=openai&logoColor=white)
+![Claude_Code](https://img.shields.io/badge/-Claude_Code-000000?style=flat-square&logo=anthropic&logoColor=white)
+![CLI](https://img.shields.io/badge/-CLI-000000?style=flat-square&logo=gnu-bash&logoColor=white)
 
-I build product systems, developer tools, and AI-native delivery workflows.
+Full-stack + mobile engineer building product systems, developer tools, and AI-native delivery workflows.
 
 Current focus:
 
@@ -34,46 +40,23 @@ Proof of motion:
 - `2.98B` tracked Codex tokens
 - `2,008` Claude history entries
 
----
-
-Current longer version below for comparison.
-
-I build products, infrastructure, and AI-native delivery systems.
-
-This profile shows the systems I work on, what they do, and how I operate across public and private projects.
-
 ## Systems I Ship, Build, And Explore
 
-| Project | State | What it is | Stack | Code |
-| --- | --- | --- | --- | --- |
-| [VeraMint](https://veramint.de) | active | Mobile news app focused on human-curated journalism, offline-first reading, and media literacy | Expo, React Native, TypeScript, Convex | private |
-| [qwer-q](https://github.com/edhor1608/qwer-q) | active | Typed, docker-first message queue with schema registry, durability, and a built-in dashboard | Go, BadgerDB, Docker | public |
-| [stead-core](https://github.com/edhor1608/stead-core) | active | Vendor-neutral session standard and interop layer for Codex and Claude Code | TypeScript | public |
-| [stead](https://github.com/edhor1608/stead) | active | Workspace orchestrator for terminals, ports, and context | TypeScript | public |
-| [aurora](https://github.com/edhor1608/aurora) | active | European community platform with a Convex-first realtime core | TypeScript, React, Convex | public |
-| [passepartout](https://github.com/edhor1608/passepartout) | shipped | Photography-first export tool for framed image output and social-ready formats | TypeScript | public |
-| edhor-me | active | Personal site and portfolio with an AI-powered ask-me flow | Astro, Tailwind, Playwright, Vercel AI SDK | private |
-| [Picalyze](https://picalyze.com) | active | Photography analysis platform for uploading, analyzing, and exploring photo insights | TypeScript, web app stack, third-party photo integrations | private |
-| Thinking Loop | active | Deep research and idea-convergence workflow built around iterative agent loops | shell, AI workflows, session tooling | private |
-| Fair Creator | active | Transparency-first platform for creator-contractor relationships and fair work standards | TypeScript, TanStack, data pipeline, moderation workflows | private |
-| Image Provenance | planning | Verifiable image authenticity that survives social media distribution | Rust, watermarking, distributed registry | private |
-| Upstrio | concept | European streaming platform exploring fair economics and distributed infrastructure | architecture, market design, distributed systems | private |
+- **[stead](https://github.com/edhor1608/stead)** - workspace orchestrator for terminals, ports, and context
+- **[aurora](https://github.com/edhor1608/aurora)** - European community platform with a Convex-first realtime core
+- **[passepartout](https://github.com/edhor1608/passepartout)** - photography-first export tool for framed image output and social-ready formats
+- **edhor-me** - personal site and portfolio with an AI-powered ask-me flow
+- **Thinking Loop** - deep research and idea-convergence workflow built around iterative agent loops
+- **Fair Creator** - transparency-first platform for creator-contractor relationships and fair work standards
+- **Image Provenance** - verifiable image authenticity that survives social media distribution
+- **Upstrio** - European streaming platform exploring fair economics and distributed infrastructure
 
-## Live And Runnable Now
+## What I'm Doing
 
-- [VeraMint](https://veramint.de) - live public site
-- [Picalyze](https://picalyze.com) - live public site
-- [qwer-q](https://github.com/edhor1608/qwer-q) - public queue you can run today via Docker or from source
-- [passepartout](https://github.com/edhor1608/passepartout) - public CLI you can run locally for image analysis and export workflows
-- [aurora](https://github.com/edhor1608/aurora) - public vertical slice with a runnable web app and realtime backend scaffold
-- [stead](https://github.com/edhor1608/stead) - public CLI and control-room environment buildable from source
-
-## What I Optimize For
-
-- Shipping real systems, not demo repos
-- Small diffs, clear ownership, and boring code that stays easy to change
-- Planning before implementation and verifying through checks, tests, and review
-- Treating AI as an execution multiplier, not a replacement for engineering judgment
+- Shipping current product work across `VeraMint`, `Picalyze`, and private systems that are part of my long-term product portfolio
+- Building public tooling like `qwer-q`, `stead-core`, `stead`, `aurora`, and `passepartout`
+- Running a `Codex`-first workflow for implementation and review, with `Claude Code` as the UI and frontend-design lane
+- Keeping the public side runnable and inspectable while private systems stay visible through concrete product descriptions
 
 ## AI-Native Operator
 
@@ -220,12 +203,8 @@ Snapshot as of `2026-03-22`.
   - 29 repositories pushed in 2026 already
 </details>
 
-## Start Here
+## Connect
 
-If you want a quick sample of what I build, start with:
-
-- [aurora](https://github.com/edhor1608/aurora)
-- [stead-core](https://github.com/edhor1608/stead-core)
-- [stead](https://github.com/edhor1608/stead)
-- [qwer-q](https://github.com/edhor1608/qwer-q)
-- [passepartout](https://github.com/edhor1608/passepartout)
+[![Website](https://img.shields.io/badge/-qwer.racing-111111?style=flat-square&logo=google-chrome&logoColor=white)](https://qwer.racing)
+[![X](https://img.shields.io/badge/-@edhor1608-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/edhor1608)
+[![GitHub](https://img.shields.io/badge/-edhor1608-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/edhor1608)

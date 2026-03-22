@@ -274,3 +274,33 @@ Keep the existing longer structure underneath, separated by a divider, so the tw
 - The profile is temporarily redundant by design
 - The next pass should remove one of the two directions after comparison
 - Feedback can now focus on structure and scannability rather than imagined diffs
+
+## 2026-03-22 - Merge the curated-builder top into the main README
+
+### Context
+
+After comparing the two structures live, the top section was clearly stronger: faster identity, current focus up front, and a more scannable first screen. The next step was to merge that direction into the main README while keeping the AI/dashboard material intact.
+
+### Decision
+
+Restructure the README to:
+
+1. use a stronger header with a badge row
+2. keep the curated `Current focus` section at the top
+3. convert `Systems I Ship, Build, And Explore` from a dense table into the same bullet-driven style
+4. remove `Live And Runnable Now`
+5. replace `What I Optimize For` with `What I'm Doing`
+6. remove `Start Here`
+7. add a `Connect` block with real public links
+
+### Rationale
+
+- This keeps the strongest top-of-page structure from the comparison pass
+- The bullet style is easier to scan than the earlier table for this kind of mixed public/private project list
+- The README now reads more like a live builder profile and less like a static inventory
+
+### Consequences
+
+- The profile is now structurally closer to the steipete-inspired direction
+- The AI and dashboard sections remain intact, so depth is preserved below the fold
+- Future refinements should now focus on copy polish and section trimming rather than major structure changes
