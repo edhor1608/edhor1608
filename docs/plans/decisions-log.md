@@ -108,3 +108,83 @@ Rename the section to `Live And Runnable Now`.
 
 - Private but shipped work no longer appears in that section unless it is publicly accessible
 - The section may need periodic review as more projects gain or lose live surfaces
+
+## 2026-03-22 - Evidence-based AI workflow analysis
+
+### Context
+
+The `AI-Native Operator` section should be grounded in observed usage patterns, not just plausible branding language.
+
+### Decision
+
+Add:
+
+1. `scripts/analyze_ai_workflow.py` to extract workflow evidence from local Codex and Claude artifacts plus GitHub contribution history
+2. `docs/ai-workflow-analysis.md` as the generated analysis report
+
+The report should separate direct findings from interpretation and explicitly track time evolution.
+
+### Rationale
+
+- This creates an audit trail for future profile wording changes
+- It makes the AI/workflow section defensible line by line
+- It captures a more important signal than raw counts alone: how the workflow changed over weeks
+
+### Consequences
+
+- The analysis depends on private local telemetry and is not meant for direct publication
+- Some findings are heuristic because keyword pattern matching is approximate
+- Future rewrites of the profile should cite this report rather than restating assumptions
+
+## 2026-03-22 - Time-aware rewrite of AI operator section
+
+### Context
+
+The earlier `AI-Native Operator` text was directionally right but too generic. It needed to reflect not just what tools are used, but how the workflow actually behaves and how it changed over early 2026.
+
+### Decision
+
+Rewrite the section to emphasize:
+
+1. planning, review, bugfix, docs, testing, research, frontend, and worktree usage as observed workflow signals
+2. differentiated roles for Codex and Claude
+3. the time shift from Claude-heavy exploration into Codex-heavy delivery
+
+### Rationale
+
+- This keeps the branding language but grounds it in observable evidence
+- The time dimension explains more than raw usage counts alone
+- The rewritten section is more useful because it describes the operating model instead of just listing tools
+
+### Consequences
+
+- The section is longer and may need a later trimming pass
+- Specific numbers inside the prose can go stale and may need refresh alongside the dashboard
+
+## 2026-03-22 - Deep AI telemetry pass for README wording
+
+### Context
+
+The next profile pass needed a higher bar than aggregate counts. The goal was to ground the public wording in week-level change, monthly signal shifts, and at least one code-retention source rather than only session totals.
+
+### Decision
+
+Expand the local analysis to include:
+
+1. monthly signal-shape tables for Codex and Claude
+2. explicit week-level inflection points for the shift from Claude-heavy exploration to Codex-heavy delivery
+3. a smaller `git-ai` prompt sample to measure tracked code retention separately from raw session volume
+
+Use those results to rewrite the public `AI-Native Operator` section and add compact weekly inflection bullets to the dashboard.
+
+### Rationale
+
+- Week-level inflection points explain the workflow shift more clearly than monthly totals alone
+- Signal-shape tables reveal what the AI was used for, not just how much it was used
+- `git-ai` adds a useful second lens: whether tracked AI-assisted code tends to survive in git
+
+### Consequences
+
+- The local analysis artifact became more useful for future rewrites, but also more sensitive and therefore should remain local-only
+- The public README now makes stronger claims with better evidence behind them
+- The dashboard has slightly more density, so future passes may need a trim after live review

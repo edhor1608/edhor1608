@@ -39,13 +39,27 @@ This profile shows the systems I work on, what they do, and how I operate across
 
 ## AI-Native Operator
 
-I work in an AI-heavy loop, but with structure:
+My AI usage is structured, repo-bound, and phase-dependent rather than one generic chat stream.
 
-- plan first, then cut work into small PR-sized changes
-- use `Codex` and `Claude` as active implementation and review partners
-- run parallel work through `git worktree`, branch isolation, and agent loops
-- keep a bias toward `gh`, PR review, automation, and repeatable delivery workflows
-- document decisions, keep project knowledge in-repo, and avoid hidden context
+### What The Workflow Optimizes For
+
+- Planning and task shaping stay inside the build loop. In Codex thread openers alone, planning-related prompts show up `65` times, documentation `58`, bugfix `49`, review `35`, research `28`, and testing `23`.
+- Frontend and product-shaping work are a major slice of the loop. Frontend/UI signals show up `98` times in Codex thread openers and `489` times in Claude transcript user messages.
+- Parallel execution is part of the normal operating model. Worktree-specific Codex prompts appear `19` times, explicit agent prompts `9` times, and non-main agent roles account for `32` threads and about `699M` tracked tokens.
+- The work stays project-centered. Codex-heavy work clusters around `VeraMint`, `stead-core`, `passepartout`, `Aegis`, and `Nexum`. Claude-heavy work clusters around `Picalyze`, `VeraMint`, `qwer-digest`, `qwer-q`, and `Upstrio`.
+
+### How The Tool Split Looks
+
+- `Claude` carries the high-volume exploration layer. January `2026` alone has `1,512` Claude entries, with dominant signals in bugfixing, planning, testing, and brainstorming.
+- `Codex` carries the heavier repo-bound execution layer. February `2026` jumps to `143` Codex threads and `1.73B` tracked tokens, with strong planning, frontend, docs, bugfix, PR, and review signals.
+- March `2026` stays Codex-heavy: `76` threads and `1.22B` tracked tokens, while Claude drops to `14` entries. The top Codex signals in March are frontend, docs, brainstorm, and plan, which reads like active product and tooling buildout rather than passive chat.
+
+### What Changed Over Weeks
+
+- `2026-W06`: Claude-heavy phase with `221` entries across `29` sessions and almost no Codex activity.
+- `2026-W08`: Codex takes over with `110` threads and `738.7M` tracked tokens while Claude is down to `21` entries.
+- `2026-W10`: Codex remains dominant at `53` threads and `717.0M` tracked tokens; Claude is only `12` entries.
+- The pattern is consistent: early `2026` starts as high-volume Claude exploration, then shifts into Codex-centered delivery, parallel execution, and longer implementation sessions.
 
 ### Tools I Actually Use
 
@@ -75,9 +89,9 @@ Snapshot as of `2026-03-22`.
     </td>
     <td valign="top">
       <strong>GitHub</strong><br/>
-      2,000 contributions<br/>
+      2,005 contributions<br/>
       183 PR contributions<br/>
-      1,529 private contributions
+      1,530 private contributions
     </td>
   </tr>
 </table>
@@ -86,13 +100,20 @@ Snapshot as of `2026-03-22`.
 
 | Month | GitHub Contributions | Codex Threads | Codex Tokens | Claude Entries |
 | --- | ---: | ---: | ---: | ---: |
-| 2026-03 | 39 | 76 | 1216.6M | 14 |
+| 2026-03 | 44 | 76 | 1216.9M | 14 |
 | 2026-02 | 598 | 143 | 1732.7M | 482 |
 | 2026-01 | 634 | 15 | 1.1M | 1512 |
 | 2025-12 | 37 | 10 | 3.7M | - |
 | 2025-11 | 93 | 2 | 3.9M | - |
 | 2025-10 | 69 | 3 | 17.7M | - |
 | 2025-09 | 84 | 2 | 2.9M | - |
+
+### Weekly Inflection Points
+
+- `2026-W06`: Claude `221` entries across `29` sessions, Codex `1` thread
+- `2026-W08`: Codex `110` threads and `738.7M` tracked tokens, Claude `21` entries
+- `2026-W10`: Codex `53` threads and `717.0M` tracked tokens, Claude `12` entries
+- `2026-W12`: Codex `7` threads and `16.5M` tracked tokens, Claude `1` entry
 
 ### Top Projects
 
@@ -101,7 +122,7 @@ Snapshot as of `2026-03-22`.
 | Project | Threads | Tokens |
 | --- | ---: | ---: |
 | VeraMint | 77 | 826.0M |
-| repos root | 41 | 490.6M |
+| repos root | 41 | 490.9M |
 | stead-core | 10 | 431.4M |
 | passepartout | 3 | 282.2M |
 | Aegis | 1 | 245.3M |
@@ -127,7 +148,7 @@ Snapshot as of `2026-03-22`.
 
   | Role | Threads | Tokens |
   | --- | ---: | ---: |
-  | main | 219 | 2279.6M |
+  | main | 219 | 2279.9M |
   | worker | 24 | 597.6M |
   | explorer | 4 | 87.3M |
   | researcher | 2 | 12.3M |
