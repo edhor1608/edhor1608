@@ -8,7 +8,7 @@ This profile shows the systems I work on, what they do, and how I operate across
 
 | Project | State | What it is | Stack | Code |
 | --- | --- | --- | --- | --- |
-| Meinungsmache / VeraMint | active | Mobile news app focused on human-curated journalism, offline-first reading, and media literacy | Expo, React Native, TypeScript, Convex | private |
+| VeraMint | active | Mobile news app focused on human-curated journalism, offline-first reading, and media literacy | Expo, React Native, TypeScript, Convex | private |
 | [qwer-q](https://github.com/edhor1608/qwer-q) | active | Typed, docker-first message queue with schema registry, durability, and a built-in dashboard | Go, BadgerDB, Docker | public |
 | [stead-core](https://github.com/edhor1608/stead-core) | active | Vendor-neutral session standard and interop layer for Codex and Claude Code | TypeScript | public |
 | [stead](https://github.com/edhor1608/stead) | active | Workspace orchestrator for terminals, ports, and context | TypeScript | public |
@@ -23,7 +23,7 @@ This profile shows the systems I work on, what they do, and how I operate across
 
 ## Recent Shipped Work
 
-- Meinungsmache / VeraMint: pushed the Expo 55 upgrade, audio migration, and release-gating work for mobile delivery
+- VeraMint: pushed the Expo 55 upgrade, audio migration, and release-gating work for mobile delivery
 - aurora: shipped auth/session baseline work and permissioned text flow core
 - qwer-q: shipped a typed queue with schema registry, durability, metrics, and an embedded dashboard
 - Picalyze: improved third-party integration error handling, health checks, and asset sync tracking
@@ -107,7 +107,7 @@ Snapshot as of `2026-03-22`.
 
 | Project | Threads | Tokens |
 | --- | ---: | ---: |
-| meinungsmache-app | 77 | 826.0M |
+| VeraMint | 77 | 826.0M |
 | repos root | 41 | 490.6M |
 | stead-core | 10 | 431.4M |
 | passepartout | 3 | 282.2M |
@@ -119,7 +119,7 @@ Snapshot as of `2026-03-22`.
 | Project | Entries |
 | --- | ---: |
 | picalyze | 392 |
-| meinungsmache-app | 373 |
+| VeraMint | 373 |
 | qwer-digest | 228 |
 | qwer-q | 145 |
 | stead | 95 |
