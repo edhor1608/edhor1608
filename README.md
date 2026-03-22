@@ -2,7 +2,7 @@
 
 I build products, infrastructure, and AI-native delivery systems.
 
-Some of my code is public. Some of it stays closed because it is product IP I plan to monetize, not because the work is vague or unfinished. I still want the work to be visible, so this profile names the systems, what they do, and how I operate.
+This profile shows the systems I work on, what they do, and how I operate across public and private projects.
 
 ## Systems I Ship, Build, And Explore
 
