@@ -1,0 +1,23 @@
+docs/profile-fact-audit-2026-05-24.md
+  s_9ca710edfa53b0::t_3f8fb04e467637 120-124,135-136,159-160
+docs/plans/decisions-log.md
+  s_9ca710edfa53b0::t_c84cff1b53fc2e 277-301
+README.md
+  s_9ca710edfa53b0::t_d10e86a17f5570 8,26-28,67-68,73,93,95-96
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "39a8c8b790fc9dc6ca981c58dbe4a760c31b8e9b",
+  "prompts": {},
+  "sessions": {
+    "s_9ca710edfa53b0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e5a72-80b7-7c80-8eb0-1c9c3feb6777",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Jonas Rohde <edhor.jonas@gmail.com>"
+    }
+  }
+}
