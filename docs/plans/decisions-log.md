@@ -244,6 +244,36 @@ Extend `scripts/generate_ai_dashboard.py` to include:
 - Cursor ACP session counts are much larger than human-visible chat counts and need to stay labeled as ACP sessions
 - Refreshes now depend on additional local Pi and Cursor paths, but missing paths degrade to zero instead of failing
 
+## 2026-05-24 - Make profile claims evidence-first
+
+### Context
+
+The profile copy still mixed current facts, older March-era claims, and interpretive positioning. Project priorities and tool usage had changed enough that the README needed a full evidence pass rather than another partial stats refresh.
+
+### Decision
+
+Add `docs/profile-fact-audit-2026-05-24.md` and rewrite the public profile around facts from:
+
+1. GitHub push recency
+2. Codex project, model, signal, and token data
+3. Claude history and transcript volume
+4. Pi sessions and `pi-tools` activity
+5. Cursor ACP and AI-code-tracking footprint
+6. installed local agent skills
+
+### Rationale
+
+- Public project priority should be anchored in recent repo activity and local AI-session load
+- The "how" section should state observed patterns instead of generic AI-native positioning
+- Cursor data is too noisy for project priority, so it should be explicitly labeled as footprint data
+- Claude remains historically important, but current copy should reflect lower recent volume
+
+### Consequences
+
+- The README is more data-heavy but less likely to overstate current usage
+- Future edits should update the fact audit or rerun the relevant scripts before changing project priorities
+- Some claims are now deliberately narrower, especially around skills and Cursor
+
 ## 2026-03-22 - Prioritize user-confirmed current setup over passive footprint data
 
 ### Context

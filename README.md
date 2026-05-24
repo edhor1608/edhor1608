@@ -10,19 +10,20 @@
 
 Full-stack + mobile engineer building product systems, developer tools, and AI-native delivery workflows.
 
-Current focus:
+Current focus, backed by recent repo activity and local AI-session data:
 
-- 🧩 [pi-tools](https://github.com/edhor1608/pi-tools) - context-quality extensions for Pi sessions, compaction, context files, and model prompts
-- 🚇 [qwer-q](https://github.com/edhor1608/qwer-q) - typed, docker-first message queue with schema registry and dashboard
-- 🖼️ [passepartout](https://github.com/edhor1608/passepartout) - photography-first export tool for framed image output and social-ready formats
-- 🧪 [zero](https://github.com/edhor1608/zero) - programming-language exploration for agent-oriented development
-- 🗞️ [VeraMint](https://veramint.de) and 📸 [Picalyze](https://picalyze.com) - active product work across news and photography analysis
+- 🧩 [pi-tools](https://github.com/edhor1608/pi-tools) - public Pi package, pushed `2026-05-21`, with `9` tracked Pi sessions
+- 🚇 [qwer-q](https://github.com/edhor1608/qwer-q) - public typed message-queue work, pushed `2026-05-21`
+- 🖼️ [passepartout](https://github.com/edhor1608/passepartout) - public photography export tool, pushed `2026-05-22`, with `7` recent Codex threads
+- 🧪 [zero](https://github.com/edhor1608/zero) / `zero-sense` - language and agent-development exploration; `zero-sense` is a top `2026-W21` Codex focus
+- 🌌 [aurora](https://github.com/edhor1608/aurora), 🗞️ [VeraMint](https://veramint.de), and 📸 [Picalyze](https://picalyze.com) - recent product/system work across public and private repos
 
 Current setup:
 
-- `Codex` via `GPT-5.5`, with the Codex app now a regular part of the workflow
-- Matt Pocock-style agent skills for diagnosis, TDD, triage, PRD-to-issues work, architecture review, and implementation loops
-- `Pi` with a custom [`pi-tools`](https://github.com/edhor1608/pi-tools) setup for model prompts, context health, context-file control, file footnotes, notifications, stash, and structured compaction
+- `Codex` via `GPT-5.5`; the last `30` days show `119` tracked `gpt-5.5` Codex threads and about `4.26B` tracked tokens
+- `29` local agent skills installed, including diagnosis, TDD, triage, PRD-to-issues, architecture review, workflow, and browser/deploy loops
+- `Pi` configured with `openai-codex/gpt-5.5` and a custom [`pi-tools`](https://github.com/edhor1608/pi-tools) package setup
+- `Cursor` is tracked separately as ACP/session and AI-code-footprint data, not treated as a reliable project-priority signal
 
 Live and runnable:
 
@@ -37,10 +38,10 @@ Live and runnable:
 
 Proof of motion:
 
-- `2,396` GitHub contributions
+- `2,397` GitHub contributions
 - `160` PR contributions
 - `951` tracked Codex threads
-- `17.39B` tracked Codex tokens
+- `17.40B` tracked Codex tokens
 - `2,143` Claude history entries
 - `35` tracked Pi sessions
 - `71,463` Cursor ACP sessions
@@ -52,53 +53,55 @@ Proof of motion:
 - **🖼️ [passepartout](https://github.com/edhor1608/passepartout)** - photography-first export tool for framed image output and social-ready formats
 - **🧪 [zero](https://github.com/edhor1608/zero)** - programming-language exploration for agent-oriented development
 - **🏗️ [sandcastle](https://github.com/edhor1608/sandcastle)** - TypeScript orchestration for sandboxed coding agents
+- **🌌 [aurora](https://github.com/edhor1608/aurora)** - European community platform with a Convex-first realtime core
 - **🗞️ [VeraMint](https://veramint.de)** - mobile news product focused on human-curated journalism, offline-first reading, and media literacy
 - **📸 [Picalyze](https://picalyze.com)** - photography analysis platform for upload, analysis, and workflow exploration
-- **🌌 [aurora](https://github.com/edhor1608/aurora)** - European community platform with a Convex-first realtime core
 
 ## What I'm Doing
 
-- Building AI-coding and context tooling around `pi-tools`, Matt Pocock-style skills, and the Codex app
-- Shipping public systems like `qwer-q`, `passepartout`, `zero`, `sandcastle`, and `aurora`
-- Keeping product work moving across `VeraMint`, `Picalyze`, and private systems that are part of my long-term product portfolio
-- Running a `Codex`-first workflow for implementation and review, with the Codex app, Matt Pocock-style skills, and Pi context tooling in regular use
-- Keeping the public side runnable and inspectable while the headline stack reflects current priorities
+- Building AI-coding and context tooling around `pi-tools`, local agent skills, and the Codex app
+- Shipping public systems that were pushed recently: `passepartout`, `qwer-q`, `pi-tools`, `zero`, `sandcastle`, and `aurora`
+- Keeping product work moving across `VeraMint`, `Picalyze`, and private systems; both product repos were pushed on `2026-05-21`
+- Using Codex as the current heavy execution lane, while Pi and Cursor are tracked as separate local workflow surfaces
+- Keeping the public side runnable and inspectable while the headline stack follows current evidence
 
-## AI-Native Operator
+## AI Workflow Evidence
 
-My AI usage is structured, repo-bound, and phase-dependent rather than one generic chat stream.
+The claims below are derived from local Codex, Claude, Pi, Cursor, and GitHub artifacts. They describe observed usage, not a complete record of every private conversation or external tool run.
 
-### What The Workflow Optimizes For
+### Observed Patterns
 
-- Planning and task shaping stay inside the build loop. In Codex thread openers alone, planning-related prompts show up `446` times, documentation `195`, bugfix `125`, review `111`, research `359`, and testing `129`.
-- Frontend and product-shaping work are a major slice of the loop. Frontend/UI signals show up `224` times in Codex thread openers and `388` times in Claude transcript user messages.
-- Parallel execution is part of the normal operating model. Worktree-specific Codex prompts appear `74` times, explicit agent prompts `274` times, and non-main agent roles account for `432` threads and about `8.72B` tracked tokens.
-- The setup is opinionated rather than scattered. `Codex` is the main delivery lane, the Codex app is now part of daily work, Matt Pocock-style skills shape engineering loops, and `Pi` is tuned through `pi-tools`.
-- The work stays project-centered. Current priority is `pi-tools`, `qwer-q`, `passepartout`, `zero`, and product work around `VeraMint`/`Picalyze`; recent historical AI load also shows heavy work on `aurora` and `stead-core`.
+- Codex thread openers show repeated planning, research, agent, frontend, docs, PR, test, bugfix, review, and worktree work. Across `926` non-empty openers: plan `446`, research `359`, agent `274`, frontend `224`, docs `195`, PR `145`, test `129`, bugfix `125`, review `111`, worktree `74`.
+- The last `60` days are especially planning/research/agent-heavy: plan `367`, research `322`, agent `265`, docs `127`, frontend `115`, PR `113`, testing `106`, bugfix `99`.
+- The last `30` days shift toward execution and maintenance signals: bugfix `15`, frontend `12`, docs `12`, research `12`, triage `12`, plan `11`, review `6`.
+- Skill usage is visible but uneven. `29` local skills are installed; recent Codex openers include `setup-matt-pocock-skills` `6` times and `grill-with-docs` `2` times, while Pi transcripts contain recurring workflow, TDD, triage, prototype, and PR-comment skill references.
+- Worktree and agent patterns are present enough to count, but not every mention is a successful parallel run. The data supports "regularly used", not "always on".
 
-### How The Tool Split Looks
+### Current Project Evidence
 
-- `Claude` carries the high-volume exploration layer. January `2026` alone has `1,512` Claude entries, with dominant signals in bugfixing, planning, testing, and brainstorming.
-- `Codex` carries the heavier repo-bound execution layer. The current setup is `GPT-5.5`, with both CLI and Codex app in regular use.
-- Matt Pocock-style skills are now a major workflow layer for diagnosis, TDD, triage, issue shaping, PRD work, and architecture review.
-- `Pi` is in active use with [`pi-tools`](https://github.com/edhor1608/pi-tools): model-specific prompt fragments, context health, context-file controls, file footnotes, notifications, prompt stash, and structured compaction.
-- May `2026` stays Codex-heavy: `117` threads and `3.92B` tracked tokens, while Claude is at `48` entries. April is the heaviest tracked Codex month so far with `481` threads and `7.52B` tracked tokens, driven mainly by planning, research, agent, and PR signals.
+- GitHub pushes in May `2026` include `passepartout`, `qwer-q`, `pi-tools`, `meinungsmache-app`/`VeraMint`, `picalyze`, `zero`, `sandcastle`, and `aurora`.
+- Last `30` days of Codex token load are led by `aurora` (`1.84B`), `Picalyze` (`411.5M`), `zero-sense` (`243.8M`), `passepartout` (`221.3M`), `VeraMint` (`191.7M`), `stead` (`176.2M`), and `pi-tools` (`122.3M`).
+- Last `60` days still show a wider historical buildout: `repos root`, `VeraMint`, `aurora`, `stead`, `Picalyze`, `zero-sense`, `passepartout`, and `pi-tools`.
+- Cursor's local project signal is weak: ACP metadata is mostly attached to `home`, so Cursor is tracked as usage/code-footprint evidence rather than project-priority evidence.
 
-### What Changed Over Weeks
+### Tool Split
 
-- `2026-W06`: Claude-heavy phase with `221` entries across `29` sessions and almost no Codex activity.
-- `2026-W08`: Codex takes over with `110` threads and `738.7M` tracked tokens while Claude is down to `21` entries.
-- `2026-W14`: Codex peaks at `290` threads and `5.16B` tracked tokens, with Claude at `48` entries.
+- `Codex` is the current heavy execution lane. Last `30` days: `gpt-5.5` accounts for `119` tracked Codex threads and about `4.26B` tracked tokens.
+- `Claude` was the highest-volume exploration layer in early `2026`; January alone has `1,512` history entries. Recent Claude volume is much lower: `10` entries in `2026-W21` and `38` in `2026-W19`.
+- `Pi` is a smaller but concrete context/tooling lane: `35` session files, `10,934` message entries, `9` projects, and `9` sessions under `pi-tools`.
+- `Cursor` currently contributes a separate local footprint: `71,463` ACP session metadata files and `346` tracked AI code hashes, including `131` with `gpt-5.5`.
+- Git workflow is `git`, `git worktree`, Graphite (`gt`) by preference, and PR review loops.
+
+### Time Shift
+
+- `2026-W06`: Claude-heavy phase with `221` entries across `29` sessions and only `1` Codex thread.
+- `2026-W08`: Codex takes over with `110` threads and about `740.9M` tracked tokens.
+- `2026-W14`: Codex peaks at `290` threads and `5.16B` tracked tokens.
 - `2026-W18`: Codex remains heavy at `37` threads and `2.77B` tracked tokens, mostly around `aurora`, `Picalyze`, and `VeraMint`.
-- The pattern is consistent: early `2026` starts as high-volume Claude exploration, then shifts into Codex-centered delivery, parallel execution, and longer implementation sessions.
+- `2026-W21`: smaller but current work clusters around `zero-sense`, `stead`, and `pi-tools`.
 
-### Tools I Actually Use
+### Stack
 
-- AI: Codex, Claude, Pi
-- Current setup: `Codex` via `GPT-5.5`, using both CLI and Codex app
-- Skill setup: Matt Pocock-style engineering skills for diagnosis, TDD, triage, issues, PRDs, architecture, and workflow review
-- Pi setup: [`pi-tools`](https://github.com/edhor1608/pi-tools) for model prompts, context health, context files, file footnotes, notifications, stash, and structured compaction
-- Workflow: `git`, `git worktree`, `gt`, PR review loops, multi-agent execution
 - Product stack: TypeScript, Bun, React, Next.js, Astro, Expo, Convex, PostgreSQL
 - Delivery and QA: Playwright, Biome, CI workflows, Vercel, Netlify
 - Systems work: Go, Rust, Docker
@@ -112,7 +115,7 @@ Snapshot as of `2026-05-24`.
     <td valign="top">
       <strong>Codex</strong><br/>
       951 tracked threads<br/>
-      17.39B tracked tokens<br/>
+      17.40B tracked tokens<br/>
       101 working directories
     </td>
     <td valign="top">
@@ -137,7 +140,7 @@ Snapshot as of `2026-05-24`.
     </td>
     <td valign="top">
       <strong>GitHub</strong><br/>
-      2,396 contributions<br/>
+      2,397 contributions<br/>
       160 PR contributions<br/>
       1,859 private contributions
     </td>
@@ -148,7 +151,7 @@ Snapshot as of `2026-05-24`.
 
 | Month | GitHub Contributions | Codex Threads | Codex Tokens | Claude Entries | Pi Sessions | Cursor ACP Sessions |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 2026-05 | 326 | 117 | 3930.2M | 48 | 3 | 70208 |
+| 2026-05 | 327 | 117 | 3947.8M | 48 | 3 | 70208 |
 | 2026-04 | 167 | 481 | 7521.4M | 46 | 32 | 1255 |
 | 2026-03 | 80 | 178 | 4171.5M | 55 | - | - |
 | 2026-02 | 602 | 143 | 1734.9M | 482 | - | - |
@@ -159,7 +162,7 @@ Snapshot as of `2026-05-24`.
 ### Monthly Load
 
 ```text
-2026-05  GH 326  |####################|  Codex 117 threads |#####...............|  Tokens  3930.2M |##########..........|  Claude   48 |#################...|  Pi   3 |##..................|  Cursor 70208 |####################|
+2026-05  GH 327  |####################|  Codex 117 threads |#####...............|  Tokens  3947.8M |##########..........|  Claude   48 |#################...|  Pi   3 |##..................|  Cursor 70208 |####################|
 2026-04  GH 167  |##########..........|  Codex 481 threads |####################|  Tokens  7521.4M |####################|  Claude   46 |#################...|  Pi  32 |####################|  Cursor  1255 |#...................|
 2026-03  GH  80  |#####...............|  Codex 178 threads |#######.............|  Tokens  4171.5M |###########.........|  Claude   55 |####################|  Pi   - |....................|  Cursor     - |....................|
 ```
@@ -214,7 +217,7 @@ Snapshot as of `2026-05-24`.
 
   | Role | Threads | Tokens |
   | --- | ---: | ---: |
-  | main | 519 | 8666.0M |
+  | main | 519 | 8683.6M |
   | explorer | 133 | 3144.6M |
   | worker | 133 | 2200.9M |
   | convex_expert | 27 | 1576.3M |
