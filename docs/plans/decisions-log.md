@@ -218,6 +218,32 @@ Reflect only the strongest part publicly: that the workflow is multi-harness, wh
 - The public profile can mention multi-harness usage without overstating any specific third-party tool
 - The detailed harness spread remains private context instead of public profile copy
 
+## 2026-05-24 - Add Pi and Cursor to profile dashboard
+
+### Context
+
+The profile dashboard only covered Codex, Claude, and GitHub. That made the public operating snapshot stale because current workflow now includes Pi with `pi-tools` and Cursor activity.
+
+### Decision
+
+Extend `scripts/generate_ai_dashboard.py` to include:
+
+1. Pi sessions, message entries, project counts, monthly sessions, top projects, and model events from `~/.pi/agent/sessions/**/*.jsonl`
+2. Cursor ACP sessions, workdirs, monthly sessions, top workdirs, AI code hashes, conversation summaries, and code-hash models from `~/.cursor`
+3. A wider monthly dashboard table and extra top-project/internal sections for Pi and Cursor
+
+### Rationale
+
+- The dashboard should reflect the tools currently in use, not just the older Codex/Claude split
+- Pi session JSONL files provide enough structured data for sessions, projects, months, and model usage
+- Cursor's most reliable local footprint is ACP metadata plus the AI code tracking database, so the dashboard names those metrics explicitly instead of pretending they are full chat counts
+
+### Consequences
+
+- The dashboard is wider and denser, especially in the monthly load block
+- Cursor ACP session counts are much larger than human-visible chat counts and need to stay labeled as ACP sessions
+- Refreshes now depend on additional local Pi and Cursor paths, but missing paths degrade to zero instead of failing
+
 ## 2026-03-22 - Prioritize user-confirmed current setup over passive footprint data
 
 ### Context

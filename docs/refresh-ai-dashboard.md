@@ -14,6 +14,9 @@ The script reads:
 
 - `~/.codex/state_5.sqlite`
 - `~/.claude/history.jsonl`
+- `~/.pi/agent/sessions/**/*.jsonl`
+- `~/.cursor/acp-sessions/*/meta.json`
+- `~/.cursor/ai-tracking/ai-code-tracking.db`
 - GitHub data via `gh`
 
 It prints a paste-ready markdown block for the entire `## AI Operations Dashboard` section.
@@ -27,7 +30,7 @@ Update the `AI Operations Dashboard` section in `/Users/jonas/repos/edhor1608/RE
 
 Rules:
 - Do not change any other section.
-- Replace only the content starting at `## AI Operations Dashboard` and ending right before `## Start Here`.
+- Replace only the content starting at `## AI Operations Dashboard` and ending right before `## Connect`.
 - Regenerate the dashboard from the local machine state by running:
   `python3 /Users/jonas/repos/edhor1608/scripts/generate_ai_dashboard.py`
 - Keep the same overall structure unless the generated output requires a data-driven change.
@@ -42,7 +45,7 @@ After updating the README:
 
 ```bash
 python3 scripts/generate_ai_dashboard.py
-sed -n '/^## AI Operations Dashboard$/,/^## Start Here$/p' README.md
+sed -n '/^## AI Operations Dashboard$/,/^## Connect$/p' README.md
 ```
 
 The numbers and tables should match.

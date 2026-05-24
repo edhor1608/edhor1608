@@ -37,11 +37,13 @@ Live and runnable:
 
 Proof of motion:
 
-- `2,393` GitHub contributions
+- `2,396` GitHub contributions
 - `160` PR contributions
 - `951` tracked Codex threads
-- `17.38B` tracked Codex tokens
+- `17.39B` tracked Codex tokens
 - `2,143` Claude history entries
+- `35` tracked Pi sessions
+- `71,463` Cursor ACP sessions
 
 ## Systems I Ship, Build, And Explore
 
@@ -110,7 +112,7 @@ Snapshot as of `2026-05-24`.
     <td valign="top">
       <strong>Codex</strong><br/>
       951 tracked threads<br/>
-      17.38B tracked tokens<br/>
+      17.39B tracked tokens<br/>
       101 working directories
     </td>
     <td valign="top">
@@ -120,8 +122,22 @@ Snapshot as of `2026-05-24`.
       18 projects
     </td>
     <td valign="top">
+      <strong>Pi</strong><br/>
+      35 sessions<br/>
+      10,934 message entries<br/>
+      9 projects
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <strong>Cursor</strong><br/>
+      71,463 ACP sessions<br/>
+      1 working directory<br/>
+      346 AI code hashes
+    </td>
+    <td valign="top">
       <strong>GitHub</strong><br/>
-      2,393 contributions<br/>
+      2,396 contributions<br/>
       160 PR contributions<br/>
       1,859 private contributions
     </td>
@@ -130,22 +146,22 @@ Snapshot as of `2026-05-24`.
 
 ### Monthly View
 
-| Month | GitHub Contributions | Codex Threads | Codex Tokens | Claude Entries |
-| --- | ---: | ---: | ---: | ---: |
-| 2026-05 | 323 | 117 | 3921.8M | 48 |
-| 2026-04 | 167 | 481 | 7521.4M | 46 |
-| 2026-03 | 80 | 178 | 4171.5M | 55 |
-| 2026-02 | 602 | 143 | 1734.9M | 482 |
-| 2026-01 | 634 | 15 | 1.1M | 1512 |
-| 2025-12 | 37 | 10 | 3.7M | - |
-| 2025-11 | 93 | 2 | 3.9M | - |
+| Month | GitHub Contributions | Codex Threads | Codex Tokens | Claude Entries | Pi Sessions | Cursor ACP Sessions |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 2026-05 | 326 | 117 | 3930.2M | 48 | 3 | 70208 |
+| 2026-04 | 167 | 481 | 7521.4M | 46 | 32 | 1255 |
+| 2026-03 | 80 | 178 | 4171.5M | 55 | - | - |
+| 2026-02 | 602 | 143 | 1734.9M | 482 | - | - |
+| 2026-01 | 634 | 15 | 1.1M | 1512 | - | - |
+| 2025-12 | 37 | 10 | 3.7M | - | - | - |
+| 2025-11 | 93 | 2 | 3.9M | - | - | - |
 
 ### Monthly Load
 
 ```text
-2026-05  GH 323  |####################|  Codex 117 threads |#####...............|  Tokens  3921.8M |##########..........|  Claude   48 |#################...|
-2026-04  GH 167  |##########..........|  Codex 481 threads |####################|  Tokens  7521.4M |####################|  Claude   46 |#################...|
-2026-03  GH  80  |#####...............|  Codex 178 threads |#######.............|  Tokens  4171.5M |###########.........|  Claude   55 |####################|
+2026-05  GH 326  |####################|  Codex 117 threads |#####...............|  Tokens  3930.2M |##########..........|  Claude   48 |#################...|  Pi   3 |##..................|  Cursor 70208 |####################|
+2026-04  GH 167  |##########..........|  Codex 481 threads |####################|  Tokens  7521.4M |####################|  Claude   46 |#################...|  Pi  32 |####################|  Cursor  1255 |#...................|
+2026-03  GH  80  |#####...............|  Codex 178 threads |#######.............|  Tokens  4171.5M |###########.........|  Claude   55 |####################|  Pi   - |....................|  Cursor     - |....................|
 ```
 
 ### Top Projects
@@ -172,6 +188,23 @@ Snapshot as of `2026-05-24`.
 | stead | 95 |
 | ClaudeProbe | 88 |
 
+**Pi**
+
+| Project | Sessions |
+| --- | ---: |
+| repos root | 14 |
+| pi-tools | 9 |
+| repo | 5 |
+| VeraMint | 2 |
+| tmp | 1 |
+| qwer-q | 1 |
+
+**Cursor**
+
+| Workdir | ACP Sessions |
+| --- | ---: |
+| home | 71457 |
+
 <details>
   <summary>More AI internals</summary>
 
@@ -181,7 +214,7 @@ Snapshot as of `2026-05-24`.
 
   | Role | Threads | Tokens |
   | --- | ---: | ---: |
-  | main | 519 | 8657.6M |
+  | main | 519 | 8666.0M |
   | explorer | 133 | 3144.6M |
   | worker | 133 | 2200.9M |
   | convex_expert | 27 | 1576.3M |
@@ -202,6 +235,29 @@ Snapshot as of `2026-05-24`.
   | /compact | 23 |
   | /export | 13 |
   | /rate-limit-options | 12 |
+
+  <strong>Pi model events</strong>
+
+  | Model | Count |
+  | --- | ---: |
+  | gpt-5.4 | 4071 |
+  | gpt-5.5 | 90 |
+  | gpt-5.4-mini | 6 |
+  | codex-mini-latest | 6 |
+  | gpt-5.3-codex-spark | 4 |
+  | gemini-3.1-pro-high | 4 |
+  | gpt-4 | 3 |
+  | minimax-m2.5-free | 1 |
+
+  <strong>Cursor AI code tracking</strong>
+
+  - 346 AI code hashes
+  - 0 conversation summaries
+
+  | Model | Code Hashes |
+  | --- | ---: |
+  | unknown | 215 |
+  | gpt-5.5 | 131 |
 
   <strong>Repo footprint</strong>
 
