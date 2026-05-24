@@ -16,12 +16,13 @@ Current focus:
 - 📸 [Picalyze](https://picalyze.com) - photography analysis platform for upload, analysis, and workflow exploration
 - 🚇 [qwer-q](https://github.com/edhor1608/qwer-q) - typed, docker-first message queue with schema registry and dashboard
 - 🔌 [stead-core](https://github.com/edhor1608/stead-core) - vendor-neutral session standard for Codex and Claude Code interop
+- 🧩 [pi-tools](https://github.com/edhor1608/pi-tools) - context-quality extensions for Pi sessions, compaction, context files, and model prompts
 
 Current setup:
 
-- `Codex` via `GPT-5.4`, mainly in the CLI, with the Codex app also in use
-- `Claude Code` with `Opus 4.6` and the frontend-design skill for UI work
-- `T3` in evaluation, but not yet a stable default lane
+- `Codex` via `GPT-5.5`, with the Codex app now a regular part of the workflow
+- Matt Pocock-style agent skills for diagnosis, TDD, triage, PRD-to-issues work, architecture review, and implementation loops
+- `Pi` with a custom [`pi-tools`](https://github.com/edhor1608/pi-tools) setup for model prompts, context health, context-file control, file footnotes, notifications, stash, and structured compaction
 
 Live and runnable:
 
@@ -31,6 +32,7 @@ Live and runnable:
 - 🖼️ [passepartout](https://github.com/edhor1608/passepartout)
 - 🌌 [aurora](https://github.com/edhor1608/aurora)
 - 🧰 [stead](https://github.com/edhor1608/stead)
+- 🧩 [pi-tools](https://github.com/edhor1608/pi-tools)
 
 Proof of motion:
 
@@ -55,7 +57,7 @@ Proof of motion:
 
 - Shipping current product work across `VeraMint`, `Picalyze`, and private systems that are part of my long-term product portfolio
 - Building public tooling like `qwer-q`, `stead-core`, `stead`, `aurora`, and `passepartout`
-- Running a `Codex`-first workflow for implementation and review, with `Claude Code` as the UI and frontend-design lane
+- Running a `Codex`-first workflow for implementation and review, with the Codex app, Matt Pocock-style skills, and Pi context tooling in regular use
 - Keeping the public side runnable and inspectable while private systems stay visible through concrete product descriptions
 
 ## AI-Native Operator
@@ -67,15 +69,15 @@ My AI usage is structured, repo-bound, and phase-dependent rather than one gener
 - Planning and task shaping stay inside the build loop. In Codex thread openers alone, planning-related prompts show up `446` times, documentation `195`, bugfix `125`, review `111`, research `359`, and testing `129`.
 - Frontend and product-shaping work are a major slice of the loop. Frontend/UI signals show up `224` times in Codex thread openers and `388` times in Claude transcript user messages.
 - Parallel execution is part of the normal operating model. Worktree-specific Codex prompts appear `74` times, explicit agent prompts `274` times, and non-main agent roles account for `432` threads and about `8.72B` tracked tokens.
-- The setup is opinionated rather than scattered. `Codex` is the main delivery lane, and `Claude Code` is the UI and frontend-design sidecar when visual work matters.
+- The setup is opinionated rather than scattered. `Codex` is the main delivery lane, the Codex app is now part of daily work, Matt Pocock-style skills shape engineering loops, and `Pi` is tuned through `pi-tools`.
 - The work stays project-centered. Codex-heavy work clusters around `repos root`, `VeraMint`, `aurora`, `passepartout`, `Picalyze`, and `stead-core`. Claude-heavy work clusters around `Picalyze`, `VeraMint`, `qwer-digest`, `qwer-q`, `stead`, and `ClaudeProbe`.
 
 ### How The Tool Split Looks
 
 - `Claude` carries the high-volume exploration layer. January `2026` alone has `1,512` Claude entries, with dominant signals in bugfixing, planning, testing, and brainstorming.
-- `Codex` carries the heavier repo-bound execution layer. The current setup is `GPT-5.4`, mainly through the `codex` CLI, with the Codex app also in use.
-- `Claude Code` is the frontend and UI lane. The current setup there is `Opus 4.6` together with the frontend-design skill.
-- `T3` is in evaluation, but not yet part of the stable default workflow.
+- `Codex` carries the heavier repo-bound execution layer. The current setup is `GPT-5.5`, with both CLI and Codex app in regular use.
+- Matt Pocock-style skills are now a major workflow layer for diagnosis, TDD, triage, issue shaping, PRD work, and architecture review.
+- `Pi` is in active use with [`pi-tools`](https://github.com/edhor1608/pi-tools): model-specific prompt fragments, context health, context-file controls, file footnotes, notifications, prompt stash, and structured compaction.
 - May `2026` stays Codex-heavy: `117` threads and `3.92B` tracked tokens, while Claude is at `48` entries. April is the heaviest tracked Codex month so far with `481` threads and `7.52B` tracked tokens, driven mainly by planning, research, agent, and PR signals.
 
 ### What Changed Over Weeks
@@ -88,11 +90,11 @@ My AI usage is structured, repo-bound, and phase-dependent rather than one gener
 
 ### Tools I Actually Use
 
-- AI: Codex, Claude
-- Current setup: `Codex` via `GPT-5.4`, mainly in the CLI, plus the Codex app
-- UI setup: `Claude Code` with `Opus 4.6` and the frontend-design skill
-- In evaluation: `T3`
-- Workflow: `git`, `git worktree`, `gh`, PR review loops, multi-agent execution
+- AI: Codex, Claude, Pi
+- Current setup: `Codex` via `GPT-5.5`, using both CLI and Codex app
+- Skill setup: Matt Pocock-style engineering skills for diagnosis, TDD, triage, issues, PRDs, architecture, and workflow review
+- Pi setup: [`pi-tools`](https://github.com/edhor1608/pi-tools) for model prompts, context health, context files, file footnotes, notifications, stash, and structured compaction
+- Workflow: `git`, `git worktree`, `gt`, PR review loops, multi-agent execution
 - Product stack: TypeScript, Bun, React, Next.js, Astro, Expo, Convex, PostgreSQL
 - Delivery and QA: Playwright, Biome, CI workflows, Vercel, Netlify
 - Systems work: Go, Rust, Docker
