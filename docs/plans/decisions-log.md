@@ -299,6 +299,32 @@ Keep historical telemetry visible, but label current status explicitly:
 - The top README badges and setup bullets now match the current tool stack
 - Future dashboard refreshes can keep old telemetry, as long as current-status wording stays explicit
 
+## 2026-05-24 - Explain tool choice by workflow fit
+
+### Context
+
+The README had current tool stats, but not the practical selection logic: Codex App is the main lane because it is stable and improving quickly, Pi is for raw/custom harness work, GPT Image is used for UI/visual work, and Claude is now only accessed through Cursor.
+
+### Decision
+
+Describe the current workflow by when each tool is used:
+
+1. `Codex App` is the default for most work, backed by local usage volume and current OpenAI release notes for Goal mode, Appshots, mobile remote access, browser annotations, and locked/remote use
+2. `Pi` is for cleaner/rawer agent work or custom `pi-tools` behavior, but currently lower-volume
+3. `GPT Image` is the UI/visual lane
+4. `Cursor Pro` is the editor-side AI tier and current Claude access path
+
+### Rationale
+
+- The profile should explain operating choices, not just list installed tools
+- Official changelog context supports mentioning why Codex App is attractive now
+- User-confirmed workflow intent should guide public copy where passive telemetry cannot show motivation
+
+### Consequences
+
+- README wording now distinguishes default execution, custom-harness work, UI/image work, editor AI, and historical telemetry
+- Future profile refreshes should keep motivation separate from measured local usage
+
 ## 2026-03-22 - Prioritize user-confirmed current setup over passive footprint data
 
 ### Context

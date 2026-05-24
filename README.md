@@ -20,10 +20,12 @@ Current focus, backed by recent repo activity and local AI-session data:
 
 Current setup:
 
-- `Codex` via `GPT-5.5`; the last `30` days show `119` tracked `gpt-5.5` Codex threads and about `4.26B` tracked tokens
+- `Codex App` via `GPT-5.5` is the default lane; the last `30` days show `119` tracked `gpt-5.5` Codex threads and about `4.26B` tracked tokens
+- `Codex` is moving fast in the right direction: recent OpenAI updates include [Goal mode GA, Appshots, browser annotations, and locked remote use](https://help.openai.com/en/articles/6825453-chatgpt-apps-on-ios-and-android), plus [mobile remote access](https://developers.openai.com/codex/changelog)
 - `29` local agent skills installed, including diagnosis, TDD, triage, PRD-to-issues, architecture review, workflow, and browser/deploy loops
-- `Pi` configured with `openai-codex/gpt-5.5` and a custom [`pi-tools`](https://github.com/edhor1608/pi-tools) package setup
-- `Cursor Pro` is the current editor-side AI tier; local Cursor data is tracked as ACP/session and AI-code-footprint data, not as a reliable project-priority signal
+- `Pi` is for clean/raw agent work or custom tooling; it is configured with `openai-codex/gpt-5.5` and a custom [`pi-tools`](https://github.com/edhor1608/pi-tools) package setup, but is currently used less than Codex
+- `GPT Image` is the UI/visual lane when interface direction needs generated assets or design exploration
+- `Cursor Pro` is the current editor-side AI tier, including Claude access; local Cursor data is tracked as ACP/session and AI-code-footprint data, not as a reliable project-priority signal
 - `Claude` is historical in this profile now: the subscription is cancelled, so Claude metrics below describe past usage rather than the active lane
 - `Opencode Go` is no longer part of the current setup; older Opencode traces are archival footprint only
 
@@ -64,13 +66,15 @@ Proof of motion:
 - Building AI-coding and context tooling around `pi-tools`, local agent skills, and the Codex app
 - Shipping public systems that were pushed recently: `passepartout`, `qwer-q`, `pi-tools`, `zero`, `sandcastle`, and `aurora`
 - Keeping product work moving across `VeraMint`, `Picalyze`, and private systems; both product repos were pushed on `2026-05-21`
-- Using Codex as the current heavy execution lane, Pi for custom tooling, and Cursor Pro for editor-side AI
-- Keeping Claude and Opencode references explicitly historical instead of presenting them as active defaults
+- Using the Codex App for most work because it is stable in daily use and its feature velocity fits long-running coding tasks
+- Reaching for Pi when I want a cleaner/rawer harness or need custom `pi-tools` behavior
+- Using GPT Image for UI-heavy work and Cursor Pro for editor-side AI; Claude is only used through Cursor now
+- Keeping standalone Claude and Opencode references explicitly historical instead of presenting them as active defaults
 - Keeping the public side runnable and inspectable while the headline stack follows current evidence
 
 ## AI Workflow Evidence
 
-The claims below are derived from local Codex, Claude, Pi, Cursor, and GitHub artifacts plus current setup confirmations. They describe observed usage, not a complete record of every private conversation or external tool run.
+The claims below are derived from local Codex, Claude, Pi, Cursor, and GitHub artifacts plus current setup confirmations and official OpenAI release notes. They describe observed usage, not a complete record of every private conversation or external tool run.
 
 ### Observed Patterns
 
@@ -89,10 +93,12 @@ The claims below are derived from local Codex, Claude, Pi, Cursor, and GitHub ar
 
 ### Tool Split
 
-- `Codex` is the current heavy execution lane. Last `30` days: `gpt-5.5` accounts for `119` tracked Codex threads and about `4.26B` tracked tokens.
-- `Claude` was the highest-volume exploration layer in early `2026`; January alone has `1,512` history entries. Recent Claude volume is much lower (`10` entries in `2026-W21`, `38` in `2026-W19`), and the Claude subscription is now cancelled.
-- `Pi` is a smaller but concrete context/tooling lane: `35` session files, `10,934` message entries, `9` projects, and `9` sessions under `pi-tools`.
-- `Cursor Pro` is the active editor-side AI tier and contributes a separate local footprint: `71,463` ACP session metadata files and `346` tracked AI code hashes, including `131` with `gpt-5.5`.
+- `Codex App` is the current heavy execution lane. Last `30` days: `gpt-5.5` accounts for `119` tracked Codex threads and about `4.26B` tracked tokens.
+- `Codex` is the default because the app has become stable in daily use and recent releases match the workflow: Goal mode, Appshots, mobile remote access, in-app browser annotations, and remote/locked-host support.
+- `Pi` is a smaller but concrete raw/custom tooling lane: `35` session files, `10,934` message entries, `9` projects, and `9` sessions under `pi-tools`.
+- `GPT Image` is the UI/visual lane; current OpenAI image docs list `gpt-image-2` as the latest GPT Image model.
+- `Cursor Pro` is the active editor-side AI tier and the only current Claude access path. Cursor contributes a separate local footprint: `71,463` ACP session metadata files and `346` tracked AI code hashes, including `131` with `gpt-5.5`.
+- `Claude` was the highest-volume exploration layer in early `2026`; January alone has `1,512` history entries. Recent Claude volume is much lower (`10` entries in `2026-W21`, `38` in `2026-W19`), the direct Claude subscription is now cancelled, and current Claude use goes through Cursor only.
 - `Opencode Go` is not an active lane anymore; old Opencode references are treated as historical tooling evidence.
 - Git workflow is `git`, `git worktree`, Graphite (`gt`) by preference, and PR review loops.
 

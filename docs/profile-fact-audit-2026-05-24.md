@@ -120,6 +120,7 @@ Cursor caveat: ACP metadata currently mostly reports `home` as cwd, so it is a p
 User-confirmed current setup update on 2026-05-24:
 
 - `Cursor Pro` is the active editor-side AI tier.
+- Current Claude usage goes through Cursor, not a standalone Claude subscription.
 - `Opencode Go` is no longer part of the active setup.
 
 Claude:
@@ -133,6 +134,19 @@ Claude:
 README implication: Claude was a high-volume exploration layer early in 2026, but current wording should not imply it is still the main lane.
 
 User-confirmed current setup update on 2026-05-24: the Claude subscription is cancelled, so README wording should keep Claude as historical usage evidence rather than an active paid lane.
+
+## Official Product Context
+
+OpenAI release notes checked on 2026-05-24:
+
+| Source | Relevant facts |
+| --- | --- |
+| [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-apps-on-ios-and-android) | 2026-05-21 Codex update covers Appshots, Goal mode general availability across Codex app/IDE/CLI, in-app browser annotations, locked computer use, and browser improvements. |
+| [Codex changelog](https://developers.openai.com/codex/changelog) | 2026-05-14 update describes Codex remote access from the ChatGPT mobile app by connecting to a Mac running the Codex app. |
+| [OpenAI image generation docs](https://platform.openai.com/docs/guides/image-generation) | Current image docs describe GPT Image models including the latest `gpt-image-2`. |
+| [OpenAI code generation docs](https://platform.openai.com/docs/guides/code-generation) | Codex is positioned across IDE, CLI, web, mobile, and CI/CD workflows; docs recommend the latest GPT-5 family models for Codex/code generation. |
+
+README implication: it is fair to say the Codex App is the default because it is stable in practice and recent official releases fit the desired workflow. Mention Goal mode, mobile remote access, Appshots/browser features, and GPT Image only as current product context, not as proof of personal usage volume.
 
 ## Skill Evidence
 
@@ -153,9 +167,10 @@ README implication: say local skills are installed and visible in recent prompts
 ## Copy Changes This Supports
 
 - Replace broad "AI-Native Operator" wording with evidence-first workflow wording.
-- Keep Codex as the current heavy execution lane.
-- Treat Claude as historically important and currently lower-volume.
-- Mention Pi as a concrete smaller lane with `pi-tools`.
+- Keep Codex App as the current heavy execution lane and explain why it is preferred.
+- Treat Claude as historically important and currently lower-volume; current Claude access is through Cursor only.
+- Mention Pi as a concrete smaller raw/custom lane with `pi-tools`.
+- Mention GPT Image as the UI/visual lane.
 - Mention `Cursor Pro` as the current editor-side AI tier, while keeping Cursor telemetry labeled as footprint/code-tracking evidence.
 - Treat `Opencode Go` as historical footprint only, not current setup.
 - Keep current project priorities tied to both GitHub push recency and local AI session load.
