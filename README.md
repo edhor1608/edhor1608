@@ -34,11 +34,11 @@ Live and runnable:
 
 Proof of motion:
 
-- `2,005` GitHub contributions
-- `183` PR contributions
-- `251` tracked Codex threads
-- `2.98B` tracked Codex tokens
-- `2,008` Claude history entries
+- `2,393` GitHub contributions
+- `160` PR contributions
+- `951` tracked Codex threads
+- `17.38B` tracked Codex tokens
+- `2,143` Claude history entries
 
 ## Systems I Ship, Build, And Explore
 
@@ -64,11 +64,11 @@ My AI usage is structured, repo-bound, and phase-dependent rather than one gener
 
 ### What The Workflow Optimizes For
 
-- Planning and task shaping stay inside the build loop. In Codex thread openers alone, planning-related prompts show up `65` times, documentation `58`, bugfix `49`, review `35`, research `28`, and testing `23`.
-- Frontend and product-shaping work are a major slice of the loop. Frontend/UI signals show up `98` times in Codex thread openers and `489` times in Claude transcript user messages.
-- Parallel execution is part of the normal operating model. Worktree-specific Codex prompts appear `19` times, explicit agent prompts `9` times, and non-main agent roles account for `32` threads and about `699M` tracked tokens.
+- Planning and task shaping stay inside the build loop. In Codex thread openers alone, planning-related prompts show up `446` times, documentation `195`, bugfix `125`, review `111`, research `359`, and testing `129`.
+- Frontend and product-shaping work are a major slice of the loop. Frontend/UI signals show up `224` times in Codex thread openers and `388` times in Claude transcript user messages.
+- Parallel execution is part of the normal operating model. Worktree-specific Codex prompts appear `74` times, explicit agent prompts `274` times, and non-main agent roles account for `432` threads and about `8.72B` tracked tokens.
 - The setup is opinionated rather than scattered. `Codex` is the main delivery lane, and `Claude Code` is the UI and frontend-design sidecar when visual work matters.
-- The work stays project-centered. Codex-heavy work clusters around `VeraMint`, `stead-core`, `passepartout`, `Aegis`, and `Nexum`. Claude-heavy work clusters around `Picalyze`, `VeraMint`, `qwer-digest`, `qwer-q`, and `Upstrio`.
+- The work stays project-centered. Codex-heavy work clusters around `repos root`, `VeraMint`, `aurora`, `passepartout`, `Picalyze`, and `stead-core`. Claude-heavy work clusters around `Picalyze`, `VeraMint`, `qwer-digest`, `qwer-q`, `stead`, and `ClaudeProbe`.
 
 ### How The Tool Split Looks
 
@@ -76,13 +76,14 @@ My AI usage is structured, repo-bound, and phase-dependent rather than one gener
 - `Codex` carries the heavier repo-bound execution layer. The current setup is `GPT-5.4`, mainly through the `codex` CLI, with the Codex app also in use.
 - `Claude Code` is the frontend and UI lane. The current setup there is `Opus 4.6` together with the frontend-design skill.
 - `T3` is in evaluation, but not yet part of the stable default workflow.
-- March `2026` stays Codex-heavy: `76` threads and `1.22B` tracked tokens, while Claude drops to `14` entries and mostly reads as a frontend/UI sidecar. The top Codex signals in March are frontend, docs, brainstorm, and plan, which reads like active product and tooling buildout rather than passive chat.
+- May `2026` stays Codex-heavy: `117` threads and `3.92B` tracked tokens, while Claude is at `48` entries. April is the heaviest tracked Codex month so far with `481` threads and `7.52B` tracked tokens, driven mainly by planning, research, agent, and PR signals.
 
 ### What Changed Over Weeks
 
 - `2026-W06`: Claude-heavy phase with `221` entries across `29` sessions and almost no Codex activity.
 - `2026-W08`: Codex takes over with `110` threads and `738.7M` tracked tokens while Claude is down to `21` entries.
-- `2026-W10`: Codex remains dominant at `53` threads and `717.0M` tracked tokens; Claude is only `12` entries.
+- `2026-W14`: Codex peaks at `290` threads and `5.16B` tracked tokens, with Claude at `48` entries.
+- `2026-W18`: Codex remains heavy at `37` threads and `2.77B` tracked tokens, mostly around `aurora`, `Picalyze`, and `VeraMint`.
 - The pattern is consistent: early `2026` starts as high-volume Claude exploration, then shifts into Codex-centered delivery, parallel execution, and longer implementation sessions.
 
 ### Tools I Actually Use
@@ -98,27 +99,27 @@ My AI usage is structured, repo-bound, and phase-dependent rather than one gener
 
 ## AI Operations Dashboard
 
-Snapshot as of `2026-03-22`.
+Snapshot as of `2026-05-24`.
 
 <table>
   <tr>
     <td valign="top">
       <strong>Codex</strong><br/>
-      251 tracked threads<br/>
-      2.98B tracked tokens<br/>
-      31 working directories
+      951 tracked threads<br/>
+      17.38B tracked tokens<br/>
+      101 working directories
     </td>
     <td valign="top">
       <strong>Claude</strong><br/>
-      2,008 history entries<br/>
-      174 sessions<br/>
-      15 projects
+      2,143 history entries<br/>
+      269 sessions<br/>
+      18 projects
     </td>
     <td valign="top">
       <strong>GitHub</strong><br/>
-      2,005 contributions<br/>
-      183 PR contributions<br/>
-      1,530 private contributions
+      2,393 contributions<br/>
+      160 PR contributions<br/>
+      1,859 private contributions
     </td>
   </tr>
 </table>
@@ -127,20 +128,21 @@ Snapshot as of `2026-03-22`.
 
 | Month | GitHub Contributions | Codex Threads | Codex Tokens | Claude Entries |
 | --- | ---: | ---: | ---: | ---: |
-| 2026-03 | 44 | 76 | 1216.9M | 14 |
-| 2026-02 | 598 | 143 | 1732.7M | 482 |
+| 2026-05 | 323 | 117 | 3921.8M | 48 |
+| 2026-04 | 167 | 481 | 7521.4M | 46 |
+| 2026-03 | 80 | 178 | 4171.5M | 55 |
+| 2026-02 | 602 | 143 | 1734.9M | 482 |
 | 2026-01 | 634 | 15 | 1.1M | 1512 |
 | 2025-12 | 37 | 10 | 3.7M | - |
 | 2025-11 | 93 | 2 | 3.9M | - |
-| 2025-10 | 69 | 3 | 17.7M | - |
-| 2025-09 | 84 | 2 | 2.9M | - |
 
-### Weekly Inflection Points
+### Monthly Load
 
-- `2026-W06`: Claude `221` entries across `29` sessions, Codex `1` thread
-- `2026-W08`: Codex `110` threads and `738.7M` tracked tokens, Claude `21` entries
-- `2026-W10`: Codex `53` threads and `717.0M` tracked tokens, Claude `12` entries
-- `2026-W12`: Codex `7` threads and `16.5M` tracked tokens, Claude `1` entry
+```text
+2026-05  GH 323  |####################|  Codex 117 threads |#####...............|  Tokens  3921.8M |##########..........|  Claude   48 |#################...|
+2026-04  GH 167  |##########..........|  Codex 481 threads |####################|  Tokens  7521.4M |####################|  Claude   46 |#################...|
+2026-03  GH  80  |#####...............|  Codex 178 threads |#######.............|  Tokens  4171.5M |###########.........|  Claude   55 |####################|
+```
 
 ### Top Projects
 
@@ -148,12 +150,12 @@ Snapshot as of `2026-03-22`.
 
 | Project | Threads | Tokens |
 | --- | ---: | ---: |
-| VeraMint | 77 | 826.0M |
-| repos root | 41 | 490.9M |
-| stead-core | 10 | 431.4M |
-| passepartout | 3 | 282.2M |
-| Aegis | 1 | 245.3M |
-| stead | 9 | 185.7M |
+| repos root | 375 | 8136.1M |
+| VeraMint | 155 | 3029.5M |
+| aurora | 14 | 1960.4M |
+| passepartout | 10 | 503.5M |
+| Picalyze | 13 | 438.6M |
+| stead-core | 11 | 431.9M |
 
 **Claude**
 
@@ -164,7 +166,7 @@ Snapshot as of `2026-03-22`.
 | qwer-digest | 228 |
 | qwer-q | 145 |
 | stead | 95 |
-| Upstrio | 81 |
+| ClaudeProbe | 88 |
 
 <details>
   <summary>More AI internals</summary>
@@ -175,32 +177,34 @@ Snapshot as of `2026-03-22`.
 
   | Role | Threads | Tokens |
   | --- | ---: | ---: |
-  | main | 219 | 2279.9M |
-  | worker | 24 | 597.6M |
-  | explorer | 4 | 87.3M |
-  | researcher | 2 | 12.3M |
-  | convex_expert | 1 | 1.6M |
-  | frontend_claude | 1 | 0.3M |
+  | main | 519 | 8657.6M |
+  | explorer | 133 | 3144.6M |
+  | worker | 133 | 2200.9M |
+  | convex_expert | 27 | 1576.3M |
+  | researcher | 37 | 629.5M |
+  | docs_researcher | 36 | 521.2M |
+  | frontend_claude | 11 | 256.6M |
+  | reviewer | 10 | 244.3M |
 
   <strong>Top Claude commands</strong>
 
   | Command | Count |
   | --- | ---: |
-  | /resume | 63 |
+  | /usage | 95 |
+  | /resume | 68 |
   | /rewind | 53 |
   | /plugin | 50 |
-  | /clear | 25 |
+  | /clear | 26 |
   | /compact | 23 |
-  | /usage | 16 |
   | /export | 13 |
-  | /rate-limit-options | 9 |
+  | /rate-limit-options | 12 |
 
   <strong>Repo footprint</strong>
 
-  - 64 GitHub repositories total
-  - 19 public repositories
-  - 45 private repositories
-  - 29 repositories pushed in 2026 already
+  - 78 GitHub repositories total
+  - 23 public repositories
+  - 55 private repositories
+  - 43 repositories pushed in 2026 already
 </details>
 
 ## Connect
