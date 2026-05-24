@@ -325,6 +325,31 @@ Describe the current workflow by when each tool is used:
 - README wording now distinguishes default execution, custom-harness work, UI/image work, editor AI, and historical telemetry
 - Future profile refreshes should keep motivation separate from measured local usage
 
+## 2026-05-24 - Add reusable profile fact scripts
+
+### Context
+
+The README now depends on multiple evidence types: local AI telemetry, user-confirmed subscription/tool status, GitHub activity, and official OpenAI product changes. Keeping those claims accurate manually is fragile.
+
+### Decision
+
+Add scripts that separate the evidence checks:
+
+1. `scripts/fetch_openai_product_context.py` checks official OpenAI release/docs pages for Codex and GPT Image context
+2. `scripts/generate_profile_fact_audit.py` generates a reusable profile fact audit from local telemetry, current setup, and product context
+3. `scripts/check_profile_claims.py` verifies the README still contains the current workflow claims and does not drift back to stale tool claims
+
+### Rationale
+
+- The dashboard script covers numbers, but not current tool-choice semantics
+- OpenAI product facts change, so the Codex/GPT Image context should be checked from official sources
+- Current subscription/tool status is user-confirmed and should be made explicit in one repeatable audit path
+
+### Consequences
+
+- Future README refreshes can run a small fact pipeline before editing public claims
+- The claim checker is intentionally narrow and should be updated whenever the desired public workflow story changes
+
 ## 2026-03-22 - Prioritize user-confirmed current setup over passive footprint data
 
 ### Context

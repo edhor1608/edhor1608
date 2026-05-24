@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+
+from __future__ import annotations
+
+import argparse
+import re
+import sys
+from dataclasses import dataclass
+from pathlib import Path
+
+
+@dataclass(frozen=True)
+class ClaimCheck:
+    label: str
+    pattern: str
+    reason: str
+
+
+REQUIRED = (
+    ClaimCheck("codex-app-default", r"Codex App.*default lane|Using the Codex App for most work", "Codex App should be the default lane."),
+    ClaimCheck("codex-feature-context", r"Goal mode|Appshots|mobile remote access", "Codex feature momentum should be named."),
+    ClaimCheck("pi-raw-custom", r"Pi.*clean/raw|Pi.*raw/custom|cleaner/rawer harness", "Pi should be framed as raw/custom tooling."),
+    ClaimCheck("gpt-image-ui", r"GPT Image.*UI|UI-heavy work.*GPT Image", "GPT Image should cover UI/visual work."),
+    ClaimCheck("latest-gpt-image", r"gpt-image-2", "The current GPT Image model context should be present."),
+    ClaimCheck("cursor-pro", r"Cursor Pro", "Cursor Pro should be active editor-side AI."),
+    ClaimCheck("claude-through-cursor", r"Claude.*Cursor|Cursor.*Claude", "Current Claude access should go through Cursor."),
+    ClaimCheck("claude-cancelled", r"subscription is cancelled|subscription is now cancelled", "Standalone Claude should be historical."),
+    ClaimCheck("opencode-not-active", r"Opencode Go.*no longer|Opencode Go.*not an active lane", "Opencode Go should not be active."),
+)
+
+BANNED = (
+    ClaimCheck("claude-code-badge", r"Claude_Code", "Top badge should not imply standalone Claude Code is active."),
+    ClaimCheck("old-claude-model", r"Opus 4\.6", "Old Claude setup should not be current profile copy."),
+    ClaimCheck("old-codex-default", r"Codex.*GPT-5\.4.*default|GPT-5\.4.*Codex.*default", "Codex default should not drift back to GPT-5.4."),
+    ClaimCheck("opencode-active-default", r"Opencode Go[^\n]*(active default|default lane)|(active default|default lane)[^\n]*Opencode Go", "Opencode Go should not be presented as active."),
+)
+
+
+def check_required(text: str) -> list[ClaimCheck]:
+    return [check for check in REQUIRED if not re.search(check.pattern, text, flags=re.I | re.S)]
+
+
+def check_banned(text: str) -> list[ClaimCheck]:
+    return [check for check in BANNED if re.search(check.pattern, text, flags=re.I | re.S)]
+
+
+def render_results(missing: list[ClaimCheck], stale: list[ClaimCheck]) -> str:
+    lines = ["# Profile Claim Check", ""]
+    if not missing and not stale:
+        lines.append("OK: all required current-workflow claims are present and no stale claims were found.")
+        return "\n".join(lines)
+
+    if missing:
+        lines.extend(["Missing required claims:", ""])
+        for check in missing:
+            lines.append(f"- `{check.label}`: {check.reason}")
+        lines.append("")
+
+    if stale:
+        lines.extend(["Stale or banned claims:", ""])
+        for check in stale:
+            lines.append(f"- `{check.label}`: {check.reason}")
+
+    return "\n".join(lines).rstrip()
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("readme", nargs="?", default="README.md")
+    args = parser.parse_args()
+
+    text = Path(args.readme).read_text()
+    missing = check_required(text)
+    stale = check_banned(text)
+    print(render_results(missing, stale))
+    if missing or stale:
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
