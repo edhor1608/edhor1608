@@ -8,7 +8,7 @@
 ![Cursor](https://img.shields.io/badge/-Cursor-000000?style=flat-square&logo=cursor&logoColor=white)
 ![CLI](https://img.shields.io/badge/-CLI-000000?style=flat-square&logo=gnu-bash&logoColor=white)
 
-Full-stack + mobile engineer building product systems, developer tools, and AI-native delivery workflows.
+Software engineer at [vivenu](https://vivenu.com), building product systems, developer tools, and AI-native delivery workflows across work and private projects.
 
 Current focus, backed by recent repo activity and local AI-session data:
 
@@ -28,6 +28,15 @@ Current setup:
 - `Cursor Pro` is the current editor-side AI tier, including Claude access; local Cursor data is tracked as ACP/session and AI-code-footprint data, not as a reliable project-priority signal
 - `Claude` is historical in this profile now: the subscription is cancelled, so Claude metrics below describe past usage rather than the active lane
 - `Opencode Go` is no longer part of the current setup; older Opencode traces are archival footprint only
+
+Profile map:
+
+| Signal | What to look at |
+| --- | --- |
+| `What I build` | current focus, live projects, and systems list |
+| `How I build` | current setup, tool split, stack, and workflow evidence |
+| `How much AI` | proof-of-motion counters, monthly dashboard, and internals details |
+| `Why these tools` | Codex for stable long-running app work, Pi for raw/custom harness work, GPT Image for UI, Cursor Pro for editor-side AI |
 
 Live and runnable:
 

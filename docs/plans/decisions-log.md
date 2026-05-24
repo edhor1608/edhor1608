@@ -350,6 +350,31 @@ Add scripts that separate the evidence checks:
 - Future README refreshes can run a small fact pipeline before editing public claims
 - The claim checker is intentionally narrow and should be updated whenever the desired public workflow story changes
 
+## 2026-05-24 - Make first-screen profile purpose explicit
+
+### Context
+
+The README covered projects, AI workflow, tooling, telemetry, and links, but the current professional anchor was too implicit. For an unknown individual profile, the first screen needs to state the current role clearly before asking readers to parse dashboards.
+
+### Decision
+
+Add the current role to the opening line and add a compact profile map:
+
+1. visible `Software engineer at vivenu` link near the top
+2. a small table that tells readers where to find what is built, how it is built, how much AI is involved, and why those tools are used
+3. claim-check coverage so the role, profile map, activity overview, AI telemetry, links, and Markdown visual affordances do not disappear in future edits
+
+### Rationale
+
+- The profile should work for readers with no prior context
+- The role gives a fast credibility anchor while the rest of the README proves private activity and AI-heavy workflow
+- The table is a useful Markdown visual without adding decorative noise
+
+### Consequences
+
+- The first viewport now answers who, current professional context, what is being built, and where the evidence lives
+- Future claim checks include role clarity, not just AI tool status
+
 ## 2026-03-22 - Prioritize user-confirmed current setup over passive footprint data
 
 ### Context

@@ -17,6 +17,12 @@ class ClaimCheck:
 
 
 REQUIRED = (
+    ClaimCheck("vivenu-current-role", r"Software engineer at \[vivenu\]\(https://vivenu\.com\)", "The profile should identify the current vivenu SWE role near the top."),
+    ClaimCheck("profile-map", r"Profile map", "The profile should provide a compact guide to what/how/how-much/why."),
+    ClaimCheck("current-focus", r"Current focus", "The profile should show current work before deep telemetry."),
+    ClaimCheck("active-private-builder", r"private projects|private systems|public and private repos|private product", "The profile should show private/public builder activity."),
+    ClaimCheck("live-project-links", r"Live and runnable", "The profile should link important public projects and sites."),
+    ClaimCheck("systems-overview", r"Systems I Ship, Build, And Explore", "The profile should include an overview of projects and systems."),
     ClaimCheck("codex-app-default", r"Codex App.*default lane|Using the Codex App for most work", "Codex App should be the default lane."),
     ClaimCheck("codex-feature-context", r"Goal mode|Appshots|mobile remote access", "Codex feature momentum should be named."),
     ClaimCheck("pi-raw-custom", r"Pi.*clean/raw|Pi.*raw/custom|cleaner/rawer harness", "Pi should be framed as raw/custom tooling."),
@@ -26,6 +32,11 @@ REQUIRED = (
     ClaimCheck("claude-through-cursor", r"Claude.*Cursor|Cursor.*Claude", "Current Claude access should go through Cursor."),
     ClaimCheck("claude-cancelled", r"subscription is cancelled|subscription is now cancelled", "Standalone Claude should be historical."),
     ClaimCheck("opencode-not-active", r"Opencode Go.*no longer|Opencode Go.*not an active lane", "Opencode Go should not be active."),
+    ClaimCheck("proof-of-motion", r"Proof of motion", "The profile should show activity counters."),
+    ClaimCheck("dashboard", r"AI Operations Dashboard", "The profile should include the AI/GitHub dashboard."),
+    ClaimCheck("history", r"Monthly View|Monthly Load|Time Shift", "The profile should show history or trends, not just current totals."),
+    ClaimCheck("markdown-visuals", r"!\[.*?\]\(https://img\.shields\.io|<table>|<details>|```text", "The profile should include useful Markdown visual affordances."),
+    ClaimCheck("connect-links", r"## Connect", "The profile should include public connection links."),
 )
 
 BANNED = (

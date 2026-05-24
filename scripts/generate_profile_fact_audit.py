@@ -10,6 +10,7 @@ from generate_ai_dashboard import DashboardData, build_data, format_int, format_
 
 
 CURRENT_SETUP = (
+    ("vivenu", "Current employer context for the public profile: software engineer at vivenu."),
     ("Codex App", "Default lane via GPT-5.5 for most work; user-confirmed as stable with strong feature velocity."),
     ("Pi", "Clean/raw harness and custom pi-tools work; currently lower-volume than Codex."),
     ("GPT Image", "UI and visual exploration lane when interface direction needs generated assets."),

@@ -12,6 +12,17 @@ This audit backs the public README wording. It uses local machine artifacts and 
 - `~/.cursor/ai-tracking/ai-code-tracking.db`
 - `gh repo list edhor1608`
 - installed local skills under `~/.agents/skills`
+- user-confirmed current role and tool status from the 2026-05-24 profile update session
+
+## Public Role Evidence
+
+User-confirmed current profile context on 2026-05-24:
+
+- Jonas is currently a software engineer at [vivenu](https://vivenu.com).
+- The profile should still read as a single-person builder profile, not a company page.
+- The first screen should quickly answer who this is, what is being built, how it is built, and where the evidence is.
+
+README implication: mention `Software engineer at vivenu` near the top, then use current projects, workflow evidence, and AI telemetry to prove private/public activity.
 
 ## Current Project Evidence
 

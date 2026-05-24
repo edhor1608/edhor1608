@@ -45,6 +45,14 @@ Check that the README still mentions the current workflow and does not drift bac
 python3 scripts/check_profile_claims.py
 ```
 
+The claim checker covers:
+
+- current role and single-person builder positioning
+- public/private project activity
+- linked project/site overview
+- AI usage, tool choice, and stale-tool drift
+- activity counters, trends, dashboard, and Markdown visual affordances
+
 ## Prompt
 
 Use this prompt with Codex:
@@ -60,6 +68,7 @@ Rules:
 - Verify current workflow claims by running:
   `python3 /Users/jonas/repos/edhor1608/scripts/check_profile_claims.py`
 - Replace the README dashboard only if dashboard numbers changed meaningfully.
+- Keep the first-screen role clear: software engineer at vivenu plus active private/public builder.
 - Keep the current tool framing: Codex App default, Pi raw/custom, GPT Image for UI, Cursor Pro for editor AI and Claude access, standalone Claude historical, Opencode Go historical.
 - Keep the same overall README structure unless generated output requires a data-driven change.
 - Preserve project naming used publicly in the profile, especially `VeraMint`.
