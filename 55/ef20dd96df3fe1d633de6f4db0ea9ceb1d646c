@@ -1,0 +1,25 @@
+docs/plans/decisions-log.md
+  s_9ca710edfa53b0::t_6fe2e86380a9fb 302-327
+README.md
+  s_9ca710edfa53b0::t_4b6afb243d47cb 99
+  s_9ca710edfa53b0::t_9475f28772740c 23-24,26-28,69-72,77,96-98,100-101
+docs/profile-fact-audit-2026-05-24.md
+  s_9ca710edfa53b0::t_2722260486b412 123,138-145,147-150,170-173
+  s_9ca710edfa53b0::t_4f5ba29372d556 146
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "55ef20dd96df3fe1d633de6f4db0ea9ceb1d646c",
+  "prompts": {},
+  "sessions": {
+    "s_9ca710edfa53b0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e5a72-80b7-7c80-8eb0-1c9c3feb6777",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Jonas Rohde <edhor.jonas@gmail.com>"
+    }
+  }
+}
