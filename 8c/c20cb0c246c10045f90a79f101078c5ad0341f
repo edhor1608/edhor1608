@@ -1,0 +1,29 @@
+scripts/fetch_openai_product_context.py
+  s_9ca710edfa53b0::t_aa9c27593e5ef8 1-168
+docs/refresh-ai-dashboard.md
+  s_9ca710edfa53b0::t_19397f1a7cf56c 5,7,24-47,50,53,56,58-64,76-77
+scripts/generate_profile_fact_audit.py
+  s_9ca710edfa53b0::t_802dd28c5b0749 1-31,33-114,121-142,144-179
+  s_9ca710edfa53b0::t_369c1b2e776bf9 32,115-120,143
+docs/plans/decisions-log.md
+  s_9ca710edfa53b0::t_136e0ecdd775b6 328-352
+scripts/check_profile_claims.py
+  s_9ca710edfa53b0::t_0c26c50c43a4c2 1-34,36-81
+  s_9ca710edfa53b0::t_bde8121dd2b510 35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "8cc20cb0c246c10045f90a79f101078c5ad0341f",
+  "prompts": {},
+  "sessions": {
+    "s_9ca710edfa53b0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e5a72-80b7-7c80-8eb0-1c9c3feb6777",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Jonas Rohde <edhor.jonas@gmail.com>"
+    }
+  }
+}
