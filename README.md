@@ -12,11 +12,11 @@ Full-stack + mobile engineer building product systems, developer tools, and AI-n
 
 Current focus:
 
-- 🗞️ [VeraMint](https://veramint.de) - mobile news product focused on human-curated journalism, offline-first reading, and media literacy
-- 📸 [Picalyze](https://picalyze.com) - photography analysis platform for upload, analysis, and workflow exploration
-- 🚇 [qwer-q](https://github.com/edhor1608/qwer-q) - typed, docker-first message queue with schema registry and dashboard
-- 🔌 [stead-core](https://github.com/edhor1608/stead-core) - vendor-neutral session standard for Codex and Claude Code interop
 - 🧩 [pi-tools](https://github.com/edhor1608/pi-tools) - context-quality extensions for Pi sessions, compaction, context files, and model prompts
+- 🚇 [qwer-q](https://github.com/edhor1608/qwer-q) - typed, docker-first message queue with schema registry and dashboard
+- 🖼️ [passepartout](https://github.com/edhor1608/passepartout) - photography-first export tool for framed image output and social-ready formats
+- 🧪 [zero](https://github.com/edhor1608/zero) - programming-language exploration for agent-oriented development
+- 🗞️ [VeraMint](https://veramint.de) and 📸 [Picalyze](https://picalyze.com) - active product work across news and photography analysis
 
 Current setup:
 
@@ -26,13 +26,14 @@ Current setup:
 
 Live and runnable:
 
-- 🗞️ [VeraMint](https://veramint.de)
-- 📸 [Picalyze](https://picalyze.com)
+- 🧩 [pi-tools](https://github.com/edhor1608/pi-tools)
 - 🚇 [qwer-q](https://github.com/edhor1608/qwer-q)
 - 🖼️ [passepartout](https://github.com/edhor1608/passepartout)
+- 🧪 [zero](https://github.com/edhor1608/zero)
+- 🏗️ [sandcastle](https://github.com/edhor1608/sandcastle)
+- 🗞️ [VeraMint](https://veramint.de)
+- 📸 [Picalyze](https://picalyze.com)
 - 🌌 [aurora](https://github.com/edhor1608/aurora)
-- 🧰 [stead](https://github.com/edhor1608/stead)
-- 🧩 [pi-tools](https://github.com/edhor1608/pi-tools)
 
 Proof of motion:
 
@@ -44,21 +45,22 @@ Proof of motion:
 
 ## Systems I Ship, Build, And Explore
 
-- **🧰 [stead](https://github.com/edhor1608/stead)** - workspace orchestrator for terminals, ports, and context
-- **🌌 [aurora](https://github.com/edhor1608/aurora)** - European community platform with a Convex-first realtime core
+- **🧩 [pi-tools](https://github.com/edhor1608/pi-tools)** - Pi package for model prompts, context health, context-file control, file footnotes, notifications, stash, and structured compaction
+- **🚇 [qwer-q](https://github.com/edhor1608/qwer-q)** - typed, docker-first message queue with schema registry and dashboard
 - **🖼️ [passepartout](https://github.com/edhor1608/passepartout)** - photography-first export tool for framed image output and social-ready formats
-- **🌐 edhor-me** - personal site and portfolio with an AI-powered ask-me flow
-- **🧠 Thinking Loop** - deep research and idea-convergence workflow built around iterative agent loops
-- **🤝 Fair Creator** - transparency-first platform for creator-contractor relationships and fair work standards
-- **🔏 Image Provenance** - verifiable image authenticity that survives social media distribution
-- **📡 Upstrio** - European streaming platform exploring fair economics and distributed infrastructure
+- **🧪 [zero](https://github.com/edhor1608/zero)** - programming-language exploration for agent-oriented development
+- **🏗️ [sandcastle](https://github.com/edhor1608/sandcastle)** - TypeScript orchestration for sandboxed coding agents
+- **🗞️ [VeraMint](https://veramint.de)** - mobile news product focused on human-curated journalism, offline-first reading, and media literacy
+- **📸 [Picalyze](https://picalyze.com)** - photography analysis platform for upload, analysis, and workflow exploration
+- **🌌 [aurora](https://github.com/edhor1608/aurora)** - European community platform with a Convex-first realtime core
 
 ## What I'm Doing
 
-- Shipping current product work across `VeraMint`, `Picalyze`, and private systems that are part of my long-term product portfolio
-- Building public tooling like `qwer-q`, `stead-core`, `stead`, `aurora`, and `passepartout`
+- Building AI-coding and context tooling around `pi-tools`, Matt Pocock-style skills, and the Codex app
+- Shipping public systems like `qwer-q`, `passepartout`, `zero`, `sandcastle`, and `aurora`
+- Keeping product work moving across `VeraMint`, `Picalyze`, and private systems that are part of my long-term product portfolio
 - Running a `Codex`-first workflow for implementation and review, with the Codex app, Matt Pocock-style skills, and Pi context tooling in regular use
-- Keeping the public side runnable and inspectable while private systems stay visible through concrete product descriptions
+- Keeping the public side runnable and inspectable while the headline stack reflects current priorities
 
 ## AI-Native Operator
 
@@ -70,7 +72,7 @@ My AI usage is structured, repo-bound, and phase-dependent rather than one gener
 - Frontend and product-shaping work are a major slice of the loop. Frontend/UI signals show up `224` times in Codex thread openers and `388` times in Claude transcript user messages.
 - Parallel execution is part of the normal operating model. Worktree-specific Codex prompts appear `74` times, explicit agent prompts `274` times, and non-main agent roles account for `432` threads and about `8.72B` tracked tokens.
 - The setup is opinionated rather than scattered. `Codex` is the main delivery lane, the Codex app is now part of daily work, Matt Pocock-style skills shape engineering loops, and `Pi` is tuned through `pi-tools`.
-- The work stays project-centered. Codex-heavy work clusters around `repos root`, `VeraMint`, `aurora`, `passepartout`, `Picalyze`, and `stead-core`. Claude-heavy work clusters around `Picalyze`, `VeraMint`, `qwer-digest`, `qwer-q`, `stead`, and `ClaudeProbe`.
+- The work stays project-centered. Current priority is `pi-tools`, `qwer-q`, `passepartout`, `zero`, and product work around `VeraMint`/`Picalyze`; recent historical AI load also shows heavy work on `aurora` and `stead-core`.
 
 ### How The Tool Split Looks
 
