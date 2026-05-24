@@ -1,0 +1,31 @@
+scripts/generate_ai_dashboard.py
+  s_9ca710edfa53b0::t_68d7beaf760876 22,48-49,377,457
+  s_9ca710edfa53b0::t_f96385ab25e0fc 16,34-40,52-53,56-57,74-77,82-85,245-355,365-370,373,387-388,400-406,418-419,422-423,432-433,455-456,458-464,466-468,479-480,483,485,497,502-503,508-510,542-567,599-626
+  s_9ca710edfa53b0::t_7a53705e4ca80f 465
+docs/plans/decisions-log.md
+  s_9ca710edfa53b0::t_14c1fb92c00765 221-246
+README.md
+  s_9ca710edfa53b0::t_fdfe5ebeddbe92 40,43,45-46,115,124-126,128-134,136-137,140,149-150,152-157,163-164,191-207,239-260
+  s_9ca710edfa53b0::t_d09fcc60d7f090 127
+  s_9ca710edfa53b0::t_0c2a1ee4d6d88f 151,162,217
+  s_9ca710edfa53b0::t_bf1d937dd2749a 135
+docs/refresh-ai-dashboard.md
+  s_9ca710edfa53b0::t_686233dc4b29b7 33,48
+  s_9ca710edfa53b0::t_30bd472ab29740 17-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "264bc37f689390b7f8f76be1198096590251997a",
+  "prompts": {},
+  "sessions": {
+    "s_9ca710edfa53b0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e5a72-80b7-7c80-8eb0-1c9c3feb6777",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Jonas Rohde <edhor.jonas@gmail.com>"
+    }
+  }
+}
