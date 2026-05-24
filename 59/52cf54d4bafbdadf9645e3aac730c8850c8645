@@ -1,0 +1,32 @@
+README.md
+  s_9ca710edfa53b0::t_eec41c83abd4e6 11,32-39
+docs/refresh-ai-dashboard.md
+  s_9ca710edfa53b0::t_f32f7e4b75151a 71
+  s_9ca710edfa53b0::t_aac21cca6c1c64 48-55
+scripts/generate_profile_fact_audit.py
+  s_9ca710edfa53b0::t_db2a33d87998ac 13
+scripts/check_profile_claims.py
+  s_9ca710edfa53b0::t_de2e51f10ab668 22-25,35-39
+  s_9ca710edfa53b0::t_d419f04f11075d 20-21
+docs/plans/decisions-log.md
+  s_9ca710edfa53b0::t_9cec5450b73f09 365
+  s_9ca710edfa53b0::t_acc9841386c6a7 353-364,366-377
+docs/profile-fact-audit-2026-05-24.md
+  s_9ca710edfa53b0::t_3efe6dca501403 15-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "5952cf54d4bafbdadf9645e3aac730c8850c8645",
+  "prompts": {},
+  "sessions": {
+    "s_9ca710edfa53b0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e5a72-80b7-7c80-8eb0-1c9c3feb6777",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Jonas Rohde <edhor.jonas@gmail.com>"
+    }
+  }
+}
