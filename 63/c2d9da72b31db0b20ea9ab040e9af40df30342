@@ -1,0 +1,19 @@
+README.md
+  s_9ca710edfa53b0::t_9864a3f0c0e561 19,23-25,35,60,72,78-80,93-97
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "63c2d9da72b31db0b20ea9ab040e9af40df30342",
+  "prompts": {},
+  "sessions": {
+    "s_9ca710edfa53b0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e5a72-80b7-7c80-8eb0-1c9c3feb6777",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Jonas Rohde <edhor.jonas@gmail.com>"
+    }
+  }
+}
