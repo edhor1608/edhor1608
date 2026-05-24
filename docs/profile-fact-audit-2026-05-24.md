@@ -117,6 +117,11 @@ Cursor:
 
 Cursor caveat: ACP metadata currently mostly reports `home` as cwd, so it is a poor source for project priority.
 
+User-confirmed current setup update on 2026-05-24:
+
+- `Cursor Pro` is the active editor-side AI tier.
+- `Opencode Go` is no longer part of the active setup.
+
 Claude:
 
 | Period | Signal |
@@ -126,6 +131,8 @@ Claude:
 | 2026-W19 | 38 history entries |
 
 README implication: Claude was a high-volume exploration layer early in 2026, but current wording should not imply it is still the main lane.
+
+User-confirmed current setup update on 2026-05-24: the Claude subscription is cancelled, so README wording should keep Claude as historical usage evidence rather than an active paid lane.
 
 ## Skill Evidence
 
@@ -149,5 +156,6 @@ README implication: say local skills are installed and visible in recent prompts
 - Keep Codex as the current heavy execution lane.
 - Treat Claude as historically important and currently lower-volume.
 - Mention Pi as a concrete smaller lane with `pi-tools`.
-- Mention Cursor as footprint/code-tracking evidence, not as project-priority evidence.
+- Mention `Cursor Pro` as the current editor-side AI tier, while keeping Cursor telemetry labeled as footprint/code-tracking evidence.
+- Treat `Opencode Go` as historical footprint only, not current setup.
 - Keep current project priorities tied to both GitHub push recency and local AI session load.

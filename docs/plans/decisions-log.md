@@ -274,6 +274,31 @@ Add `docs/profile-fact-audit-2026-05-24.md` and rewrite the public profile aroun
 - Future edits should update the fact audit or rerun the relevant scripts before changing project priorities
 - Some claims are now deliberately narrower, especially around skills and Cursor
 
+## 2026-05-24 - Separate current subscriptions from historical tool telemetry
+
+### Context
+
+The README includes historical Claude and Opencode telemetry, but the current paid/default tool setup changed: the Claude subscription is cancelled, Cursor Pro is active, and Opencode Go is no longer part of the setup.
+
+### Decision
+
+Keep historical telemetry visible, but label current status explicitly:
+
+1. `Claude` remains historical usage evidence, not an active subscription lane
+2. `Cursor Pro` is the active editor-side AI tier
+3. `Opencode Go` is historical footprint only, not current setup
+
+### Rationale
+
+- Subscription status is user-confirmed current context and outranks passive install traces
+- Historical telemetry is still useful, but should not imply active usage
+- Public profile wording should distinguish tool footprint from current operating choices
+
+### Consequences
+
+- The top README badges and setup bullets now match the current tool stack
+- Future dashboard refreshes can keep old telemetry, as long as current-status wording stays explicit
+
 ## 2026-03-22 - Prioritize user-confirmed current setup over passive footprint data
 
 ### Context

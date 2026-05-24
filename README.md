@@ -5,7 +5,7 @@
 ![React_Native](https://img.shields.io/badge/-React_Native-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Convex](https://img.shields.io/badge/-Convex-EE342F?style=flat-square&logoColor=white)
 ![Codex](https://img.shields.io/badge/-Codex-121212?style=flat-square&logo=openai&logoColor=white)
-![Claude_Code](https://img.shields.io/badge/-Claude_Code-000000?style=flat-square&logo=anthropic&logoColor=white)
+![Cursor](https://img.shields.io/badge/-Cursor-000000?style=flat-square&logo=cursor&logoColor=white)
 ![CLI](https://img.shields.io/badge/-CLI-000000?style=flat-square&logo=gnu-bash&logoColor=white)
 
 Full-stack + mobile engineer building product systems, developer tools, and AI-native delivery workflows.
@@ -23,7 +23,9 @@ Current setup:
 - `Codex` via `GPT-5.5`; the last `30` days show `119` tracked `gpt-5.5` Codex threads and about `4.26B` tracked tokens
 - `29` local agent skills installed, including diagnosis, TDD, triage, PRD-to-issues, architecture review, workflow, and browser/deploy loops
 - `Pi` configured with `openai-codex/gpt-5.5` and a custom [`pi-tools`](https://github.com/edhor1608/pi-tools) package setup
-- `Cursor` is tracked separately as ACP/session and AI-code-footprint data, not treated as a reliable project-priority signal
+- `Cursor Pro` is the current editor-side AI tier; local Cursor data is tracked as ACP/session and AI-code-footprint data, not as a reliable project-priority signal
+- `Claude` is historical in this profile now: the subscription is cancelled, so Claude metrics below describe past usage rather than the active lane
+- `Opencode Go` is no longer part of the current setup; older Opencode traces are archival footprint only
 
 Live and runnable:
 
@@ -62,12 +64,13 @@ Proof of motion:
 - Building AI-coding and context tooling around `pi-tools`, local agent skills, and the Codex app
 - Shipping public systems that were pushed recently: `passepartout`, `qwer-q`, `pi-tools`, `zero`, `sandcastle`, and `aurora`
 - Keeping product work moving across `VeraMint`, `Picalyze`, and private systems; both product repos were pushed on `2026-05-21`
-- Using Codex as the current heavy execution lane, while Pi and Cursor are tracked as separate local workflow surfaces
+- Using Codex as the current heavy execution lane, Pi for custom tooling, and Cursor Pro for editor-side AI
+- Keeping Claude and Opencode references explicitly historical instead of presenting them as active defaults
 - Keeping the public side runnable and inspectable while the headline stack follows current evidence
 
 ## AI Workflow Evidence
 
-The claims below are derived from local Codex, Claude, Pi, Cursor, and GitHub artifacts. They describe observed usage, not a complete record of every private conversation or external tool run.
+The claims below are derived from local Codex, Claude, Pi, Cursor, and GitHub artifacts plus current setup confirmations. They describe observed usage, not a complete record of every private conversation or external tool run.
 
 ### Observed Patterns
 
@@ -87,9 +90,10 @@ The claims below are derived from local Codex, Claude, Pi, Cursor, and GitHub ar
 ### Tool Split
 
 - `Codex` is the current heavy execution lane. Last `30` days: `gpt-5.5` accounts for `119` tracked Codex threads and about `4.26B` tracked tokens.
-- `Claude` was the highest-volume exploration layer in early `2026`; January alone has `1,512` history entries. Recent Claude volume is much lower: `10` entries in `2026-W21` and `38` in `2026-W19`.
+- `Claude` was the highest-volume exploration layer in early `2026`; January alone has `1,512` history entries. Recent Claude volume is much lower (`10` entries in `2026-W21`, `38` in `2026-W19`), and the Claude subscription is now cancelled.
 - `Pi` is a smaller but concrete context/tooling lane: `35` session files, `10,934` message entries, `9` projects, and `9` sessions under `pi-tools`.
-- `Cursor` currently contributes a separate local footprint: `71,463` ACP session metadata files and `346` tracked AI code hashes, including `131` with `gpt-5.5`.
+- `Cursor Pro` is the active editor-side AI tier and contributes a separate local footprint: `71,463` ACP session metadata files and `346` tracked AI code hashes, including `131` with `gpt-5.5`.
+- `Opencode Go` is not an active lane anymore; old Opencode references are treated as historical tooling evidence.
 - Git workflow is `git`, `git worktree`, Graphite (`gt`) by preference, and PR review loops.
 
 ### Time Shift
