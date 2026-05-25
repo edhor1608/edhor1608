@@ -1,0 +1,23 @@
+README.md
+  s_9ca710edfa53b0::t_871ebaae8e4a81 15,17-19,21-23
+scripts/check_profile_claims.py
+  s_9ca710edfa53b0::t_707757e1cb0132 21
+docs/plans/decisions-log.md
+  s_9ca710edfa53b0::t_ee144664ce6d8d 427-451
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "f1e7784687a71313b2b25b3a6b70617b5a992c0a",
+  "prompts": {},
+  "sessions": {
+    "s_9ca710edfa53b0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e5a72-80b7-7c80-8eb0-1c9c3feb6777",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Jonas Rohde <edhor.jonas@gmail.com>"
+    }
+  }
+}
