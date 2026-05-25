@@ -424,6 +424,31 @@ Add the public LinkedIn URL to the top link row and `Connect` badges, and make t
 - Readers now get a direct professional-profile link alongside website, GitHub, and X
 - Future profile checks will fail if the LinkedIn link is accidentally removed
 
+## 2026-05-25 - Replace Start Here with a real hook
+
+### Context
+
+The compact `Start Here` table was orderly, but it still read like a stats index. The first section needs to be a catch: explain what the profile is trying to show, then use numbers only when they support that claim.
+
+### Decision
+
+Replace `Start Here` with `Now`:
+
+1. lead with the current work/private-builder/AI-operating-model claim
+2. keep only the stats that explain active building, AI usage, and tool preference
+3. update the claim checker to require the hook rather than the old section title
+
+### Rationale
+
+- Stats are only useful when they support a point the reader already understands
+- The hook should make the AI angle clearer without making the profile longer
+- The table can stay, but its labels need to answer "why should I care?"
+
+### Consequences
+
+- The first section now reads more like positioning and less like a dashboard table
+- Future checks guard for the hook, not the old `Start Here` wording
+
 ## 2026-03-22 - Prioritize user-confirmed current setup over passive footprint data
 
 ### Context

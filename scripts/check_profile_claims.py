@@ -18,7 +18,7 @@ class ClaimCheck:
 
 REQUIRED = (
     ClaimCheck("vivenu-current-role", r"Software engineer at \[vivenu\]\(https://vivenu\.com\)", "The profile should identify the current vivenu SWE role near the top."),
-    ClaimCheck("start-here", r"## Start Here", "The profile should provide a compact guide to what/how/how-much/why."),
+    ClaimCheck("catch-hook", r"## Now.*not that I use AI; it is that I track where it changes the shape of the work", "The profile should open with a real hook, not a generic start table."),
     ClaimCheck("current-work", r"## Current Work", "The profile should show current work before deep telemetry."),
     ClaimCheck("active-private-builder", r"private projects|private systems|public and private repos|private product", "The profile should show private/public builder activity."),
     ClaimCheck("project-links", r"https://github\.com/edhor1608/pi-tools.*https://github\.com/edhor1608/qwer-q.*https://github\.com/edhor1608/passepartout", "The profile should link important public projects and sites."),

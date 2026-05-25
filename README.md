@@ -12,14 +12,15 @@ Software engineer at [vivenu](https://vivenu.com), building product systems, dev
 
 [Website](https://qwer.racing) · [GitHub](https://github.com/edhor1608) · [LinkedIn](https://www.linkedin.com/in/jonas-rohde/) · [X](https://x.com/edhor1608)
 
-## Start Here
+## Now
 
-| Signal | Proof |
+I work on production software at vivenu and keep a private/public builder loop around tools, media products, and agent-heavy development. The interesting bit is not that I use AI; it is that I track where it changes the shape of the work.
+
+| What I want to show | Evidence |
 | --- | --- |
-| Current role | SWE at [vivenu](https://vivenu.com) |
-| Private/public builder | `43` repos pushed in `2026`, public projects plus private product systems |
-| AI in daily work | `952` tracked Codex threads, `17.47B` tracked Codex tokens |
-| Current default | Codex App on `GPT-5.5`; Pi for raw/custom work; Cursor Pro for editor-side AI |
+| still actively building outside work | `43` repos pushed in `2026`, including public tools and private product systems |
+| AI is part of the operating model | `952` tracked Codex threads and `17.47B` tracked Codex tokens |
+| current preference is opinionated | Codex App for stable long-running work, Pi for raw/custom harness work, Cursor Pro for editor-side AI |
 
 ## Current Work
 
