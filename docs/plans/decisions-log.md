@@ -375,6 +375,34 @@ Add the current role to the opening line and add a compact profile map:
 - The first viewport now answers who, current professional context, what is being built, and where the evidence lives
 - Future claim checks include role clarity, not just AI tool status
 
+## 2026-05-25 - Trim profile into a compact public read
+
+### Context
+
+The README had become fact-rich but too long and visually noisy. The reference profiles from `steipete`, `t3dotgg`, `jonschlinkert`, `juliusmarminge`, and `c-ehrlich` show a stronger pattern: clear identity, short project overview, concise links, and only enough detail to prove the point.
+
+### Decision
+
+Reduce the visible README from a long evidence dump into:
+
+1. a short identity and link block
+2. a `Start Here` proof table
+3. compact `Current Work` and `How I Build` tables
+4. a compact `AI Snapshot` with three months of trend data
+5. one collapsed evidence section for the heavier claims
+
+### Rationale
+
+- The profile should be readable by someone who has no context and only scans the first screen
+- Detailed telemetry is useful, but it belongs behind a compact snapshot or in audit docs
+- The scripts can preserve evidence without forcing the README to display every table
+
+### Consequences
+
+- The README is now much shorter and closer to the referenced profiles' density
+- `scripts/generate_ai_dashboard.py` now supports `--style compact` for the public snapshot
+- The claim checker now verifies the compact structure rather than the previous long-section names
+
 ## 2026-03-22 - Prioritize user-confirmed current setup over passive footprint data
 
 ### Context

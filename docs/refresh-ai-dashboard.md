@@ -1,10 +1,16 @@
 # Refresh AI Dashboard
 
-Use this when the `AI Operations Dashboard` in the profile README needs a fresh snapshot.
+Use this when the compact `AI Snapshot` in the profile README needs a fresh snapshot.
 
 ## Scripts
 
-Refresh the dashboard block:
+Refresh the compact README dashboard block:
+
+```bash
+python3 scripts/generate_ai_dashboard.py --months 3 --style compact
+```
+
+Generate the full internal dashboard when you need deeper tables:
 
 ```bash
 python3 scripts/generate_ai_dashboard.py
@@ -19,7 +25,7 @@ The script reads:
 - `~/.cursor/ai-tracking/ai-code-tracking.db`
 - GitHub data via `gh`
 
-It prints a paste-ready markdown block for the entire `## AI Operations Dashboard` section.
+The compact command prints a paste-ready markdown block for the public `## AI Snapshot` section. The full command prints the longer internal `## AI Operations Dashboard` block.
 
 Refresh the wider profile fact audit:
 
@@ -62,7 +68,7 @@ Update the profile facts in `/Users/jonas/repos/edhor1608/README.md`.
 
 Rules:
 - Regenerate the dashboard from local machine state by running:
-  `python3 /Users/jonas/repos/edhor1608/scripts/generate_ai_dashboard.py`
+  `python3 /Users/jonas/repos/edhor1608/scripts/generate_ai_dashboard.py --months 3 --style compact`
 - Regenerate the wider fact audit by running:
   `python3 /Users/jonas/repos/edhor1608/scripts/generate_profile_fact_audit.py > /Users/jonas/repos/edhor1608/docs/profile-fact-audit-$(date +%F).md`
 - Verify current workflow claims by running:
@@ -81,10 +87,10 @@ Rules:
 After updating the README:
 
 ```bash
-python3 scripts/generate_ai_dashboard.py
+python3 scripts/generate_ai_dashboard.py --months 3 --style compact
 python3 scripts/generate_profile_fact_audit.py
 python3 scripts/check_profile_claims.py
-sed -n '/^## AI Operations Dashboard$/,/^## Connect$/p' README.md
+sed -n '/^## AI Snapshot$/,/^## Connect$/p' README.md
 ```
 
 The numbers and tables should match.

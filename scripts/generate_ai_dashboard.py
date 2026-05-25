@@ -641,12 +641,59 @@ def render_markdown(data: DashboardData) -> str:
     return "\n".join(lines)
 
 
+def render_compact_markdown(data: DashboardData) -> str:
+    lines = [
+        "## AI Snapshot",
+        "",
+        f"Snapshot as of `{data.snapshot_date}`. The full evidence trail lives in [`docs/profile-fact-audit-2026-05-24.md`](docs/profile-fact-audit-2026-05-24.md).",
+        "",
+        "<table>",
+        "  <tr>",
+        '    <td><strong>Codex</strong><br/>'
+        f"{format_int(data.codex_threads)} threads<br/>{format_tokens_billions(data.codex_tokens)} tokens</td>",
+        '    <td><strong>GitHub</strong><br/>'
+        f"{format_int(data.github_contributions)} contributions<br/>{format_int(data.github_prs)} PRs</td>",
+        '    <td><strong>Pi</strong><br/>'
+        f"{format_int(data.pi_sessions)} sessions<br/>{format_int(data.pi_messages)} messages</td>",
+        '    <td><strong>Cursor</strong><br/>'
+        f"{format_int(data.cursor_sessions)} ACP sessions<br/>{format_int(data.cursor_code_hashes)} code hashes</td>",
+        "  </tr>",
+        "</table>",
+        "",
+        "| Month | GitHub | Codex | Tokens | Claude | Pi | Cursor |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",
+    ]
+
+    for month, github, codex_threads, codex_tokens, claude, pi, cursor in data.load_rows:
+        lines.append(
+            f"| {month} | {format_optional_int(github)} | {format_optional_int(codex_threads)} | {format_tokens_millions(codex_tokens)} | {format_optional_int(claude)} | {format_optional_int(pi)} | {format_optional_int(cursor)} |"
+        )
+
+    lines.extend(
+        [
+            "",
+            "| Tool | Why it is here |",
+            "| --- | --- |",
+            "| `Codex App` | default lane for long-running coding work on `GPT-5.5` |",
+            "| `Pi` | clean/raw harness and custom `pi-tools` experiments |",
+            "| `GPT Image` | UI direction, visual assets, and interface exploration |",
+            "| `Cursor Pro` | editor-side AI and current Claude access path |",
+            "| `Claude` / `Opencode Go` | historical telemetry only, not active standalone defaults |",
+        ]
+    )
+
+    return "\n".join(lines)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--user", default="edhor1608")
     parser.add_argument("--months", type=int, default=7)
+    parser.add_argument("--style", choices=("full", "compact"), default="full")
     args = parser.parse_args()
-    print(render_markdown(build_data(args.user, args.months)))
+    data = build_data(args.user, args.months)
+    renderer = render_compact_markdown if args.style == "compact" else render_markdown
+    print(renderer(data))
 
 
 if __name__ == "__main__":
