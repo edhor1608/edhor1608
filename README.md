@@ -10,7 +10,7 @@
 
 Software engineer at [vivenu](https://vivenu.com), building product systems, developer tools, and AI-heavy delivery workflows across work and private projects.
 
-[Website](https://qwer.racing) · [GitHub](https://github.com/edhor1608) · [X](https://x.com/edhor1608)
+[Website](https://qwer.racing) · [GitHub](https://github.com/edhor1608) · [LinkedIn](https://www.linkedin.com/in/jonas-rohde/) · [X](https://x.com/edhor1608)
 
 ## Start Here
 
@@ -83,4 +83,5 @@ Snapshot as of `2026-05-25`. The full evidence trail lives in [docs/profile-fact
 
 [![Website](https://img.shields.io/badge/-qwer.racing-111111?style=flat-square&logo=google-chrome&logoColor=white)](https://qwer.racing)
 [![X](https://img.shields.io/badge/-@edhor1608-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/edhor1608)
+[![LinkedIn](https://img.shields.io/badge/-jonas--rohde-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jonas-rohde/)
 [![GitHub](https://img.shields.io/badge/-edhor1608-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/edhor1608)

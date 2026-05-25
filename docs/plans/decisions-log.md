@@ -403,6 +403,27 @@ Reduce the visible README from a long evidence dump into:
 - `scripts/generate_ai_dashboard.py` now supports `--style compact` for the public snapshot
 - The claim checker now verifies the compact structure rather than the previous long-section names
 
+## 2026-05-25 - Add LinkedIn as a professional profile link
+
+### Context
+
+The public GitHub sidebar already includes a LinkedIn profile URL, and the user confirmed LinkedIn can be used for additional professional context. The LinkedIn page itself is mostly behind an auth wall when checked anonymously, so it should not be mined for detailed claims.
+
+### Decision
+
+Add the public LinkedIn URL to the top link row and `Connect` badges, and make the claim checker require that link.
+
+### Rationale
+
+- LinkedIn is useful as a professional context link without increasing README content length
+- Auth-walled LinkedIn details are weaker evidence than the user-confirmed README/fact-audit data
+- Keeping it as a link supports discoverability while preserving the cleaned-up profile structure
+
+### Consequences
+
+- Readers now get a direct professional-profile link alongside website, GitHub, and X
+- Future profile checks will fail if the LinkedIn link is accidentally removed
+
 ## 2026-03-22 - Prioritize user-confirmed current setup over passive footprint data
 
 ### Context

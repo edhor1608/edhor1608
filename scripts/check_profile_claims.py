@@ -37,6 +37,7 @@ REQUIRED = (
     ClaimCheck("history", r"2026-05.*2026-04.*2026-03", "The profile should show history or trends, not just current totals."),
     ClaimCheck("markdown-visuals", r"!\[.*?\]\(https://img\.shields\.io|<table>|<details>", "The profile should include useful Markdown visual affordances."),
     ClaimCheck("connect-links", r"## Connect", "The profile should include public connection links."),
+    ClaimCheck("linkedin-link", r"https://www\.linkedin\.com/in/jonas-rohde/", "The profile should link the public LinkedIn profile."),
 )
 
 BANNED = (
